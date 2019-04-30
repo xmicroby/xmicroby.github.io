@@ -1,0 +1,71 @@
+html, body {
+	margin: 0px;
+}
+
+#logo {
+	position: absolute;
+	left: 5%;
+	top: 5%;
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.navbar-item {
+
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #707070;
+}
+
+#contact-info {
+
+}
+
+#contact-logos {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.contact-logo {
+
+}
+
+#work-tab {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#basic-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#research-info {
+
+}
+
+#music-info {
+    display: none;
+}
+
+#misc-info {
+    display: none;
+}
+

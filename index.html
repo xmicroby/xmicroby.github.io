@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="assets/scripts/index.js"></script>
+	</head>
+	<body>
+	<!-- make sure that the image is a square-->
+	<div id="home"><img class="center-2d" id="logo-img" src="./assets/img/logo.png" width=100px height=100px/></a></div>
+	<div id="main">
+		<div id="navbar">
+			<div class="navbar-item" id="about">
+				<div class="center-2d navbar-text">About</div>
+			</div>
+			<div class="navbar-item" id="work">
+				<div class="center-2d navbar-text">Work</div>
+			</div>
+			<div class="navbar-item">
+				<a class="center-2d navbar-text" href="#contact">Contact</a>
+			</div>
+		</div>
+		<div id="content">
+			<div class="home-pic" id="main-pic"><!-- Put your profile pic image here -->
+				<div class="center-2d" id="circle">
+					<img class="center-2d" id="home-img" src="./assets/img/home.jpg"/ width=900px height=600px>
+					
+				</div>
+			</div>
+			<div class="home" id="basic-info">
+				<div class="center-2d">
+					<div id="name">Youngbin Kim</div>
+					<div id="description">
+						<div class="desc">Bioengineer</div>
+<!-- 						<div class="desc">Musician</div>
+						<div class="desc">BME Graduate Student</div>
+						<div class="desc">Bicyclist</div>
+						<div class="desc">Singer</div>
+						<div class="desc">Nap enthusiast</div>
+						<div class="desc">Swimmer</div>
+						<div class="desc">Aspiring Web Developer</div> -->
+					</div>
+				</div>
+			</div>
+			<div class="about" id="detailed-info">
+				<div class="center-2d">
+					Hi, my name is Youngbin.  I am a senior at UC Berkeley studying BioE with a minor in EECS.
+					<br><br>
+					I enjoy biking, traveling, and singing. I am part of an a cappella group called (link) Artists in Resonance.
+					<br><br>
+					After graduation in Spring 2019 from UC Berkeley, I will be moving to New York to pursue a PhD degree in Biomedical Engineering at Columbia University.
+				</div>
+			</div>
+			<div class="work">
+				<div id="work-table">
+					<div id="work-tab">
+						<div class="work-tabs" id="research">Research</div>
+						<div class="work-tabs" id="music">Music</div>
+						<div class="work-tabs" id="misc">Misc</div>
+					</div>
+					<div id="work-blurbs">
+						<div id="research-blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+						<div id="music-blurb"></div>
+						<div id="misc-blurb"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="contact">
+		<div id="contact-title">
+			<div class="center-2d">Contact Me</div>
+		</div>
+		<div id="contact-info">
+			<div class="center-2d">
+				You can contact me through email at youngbinkim@berkeley.edu (link to copy to clipboard) or linkedin (link)
+			</div>
+		</div>
+		<textarea id="hiddenemail">youngbinkim@berkeley.edu</textarea> 
+		<div id="contact-logos">
+			<div class="contact-logo">
+				<img id="email-logo" src = "./assets/img/email.svg" alt="youngbinkim@berkeley.edu" width=50px height=50px onclick="copyEmail()">
+			</div>
+			<div class="contact-logo">
+				<a href ="https://www.linkedin.com/in/youngbin-kim/"><img id="linkedin-logo" src = "./assets/img/linkedin.svg" width=50px height=50px/></a>
+			</div>
+			<div class="contact-logo">
+				<a href ="https://www.facebook.com/youngbinkim97/"><img id="fb-logo" src = "./assets/img/fb.svg" width=50px height=50px/></a>
+			</div>
+		</div>
+		<div id="contact-form">
+			<form class="center-2d" action="/my-handling-form-page" method="post">
+				<div>
+					<div>Name:</div>
+					<input type="text" id="form-name" name="user_name">
+				</div>
+				<div>
+					<div>E-mail:</div>
+					<input type="text" id="form-email" name="user_mail">
+				</div>
+				<div>
+					<div>Message:</div>
+					<textarea id="form-msg" name="user_message"></textarea>
+				</div>
+				<div class="button">
+					<button type="submit">Send your message</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	</body>
+</html>
