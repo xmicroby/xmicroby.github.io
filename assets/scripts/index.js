@@ -136,22 +136,62 @@ $(document).ready(function() {
 		//dont do anything if pageState == nextPage
 	});
 
-	// function typewriterDescription() {
-	// 	var desc = $("#description").children();
-	// 	var i = 0;
-	// 	while (true) {
-	// 		console.log("asdf");
-	// 		var old = (i - 1) % desc.length;
-	// 		$(desc[old]).delay(5000).removeClass("desc-type");
-	// 		$(desc[old]).hide();			
-	// 		$(desc[i]).show();
-	// 		$(desc[i]).addClass("desc-type");
-	// 		i = (i + 1) % desc.length;
-	// 	}
 
-	// }
+	//typing stuff
 
-	// typewriterDescription();
+	var words = [
+		"Bioengineer", 
+		"Musician", 
+		//"BME Graduate Student", 
+		"Bicyclist", 
+		"Singer", 
+		"Nap enthusiast", 
+		"Swimmer", 
+		"Aspiring Web Developer"
+	];
+
+	var word_index = 0;
+	var char = 0;
+	var interval;
+	var textcontainer = document.querySelector("#type")
+
+	function type() {
+		var text = words[word_index].substring(0, char + 1);
+		textcontainer.innerHTML = text;
+		char++;
+
+		if(text == words[word_index]) {
+
+			clearInterval(interval);
+			setTimeout(function() {
+				interval = setInterval(del, 50);
+			}, 1000);
+		}
+	}
+
+	function del() {
+		var text = words[word_index].substring(0, char - 1);
+		textcontainer.innerHTML = text;
+		char--;
+
+		if(text == "") {
+			clearInterval(interval);
+
+			//if current sentence was last, then display the first one. Else, move on to next
+			if(word_index == words.length - 1)
+				word_index = 1;
+			else
+				word_index++;
+
+			char = 0;
+
+			setTimeout(function() {
+				interval = setInterval(type, 100);
+			}, 200);
+		}
+	}
+	//start type sequence
+	interval = setInterval(type, 100);
 
 });
 
