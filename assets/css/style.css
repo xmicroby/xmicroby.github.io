@@ -25,6 +25,7 @@ html, body {
     /*
     border: solid black 3px;
     box-shadow: 3px 3px 3px;*/
+    transition: 0.3s;
 }
 
 #logo-img:hover {
@@ -62,6 +63,8 @@ html, body {
     position: absolute;
     height: 100%;
     width: 33%;
+    border-bottom: .15em solid transparent;
+    transition: 0.3s;
 }
 
 a {text-decoration: none; color:black;}
@@ -133,6 +136,15 @@ a:hover, a:active {text-decoration: none; color:black;}
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+#email-logo {
+    transition: 0.3s;
+}
+
+#email-logo:hover {
+    width: 60px;
+    height: 60px;
 }
 
 #contact-form {
