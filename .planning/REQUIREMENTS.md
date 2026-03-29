@@ -10,8 +10,8 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Layout & Navigation
 
 - [ ] **LAYOUT-01**: Site is fully responsive across mobile, tablet, and desktop viewports
-- [ ] **LAYOUT-02**: User can navigate between sections via clear anchor links with smooth scrolling
-- [ ] **LAYOUT-03**: Header/nav remains accessible (sticky or scroll-to-top) on all pages
+- [x] **LAYOUT-02**: User can navigate between sections via clear anchor links with smooth scrolling
+- [x] **LAYOUT-03**: Header/nav remains accessible (sticky or scroll-to-top) on all pages
 - [ ] **LAYOUT-04**: Sections have scroll-triggered entrance transitions
 
 ### Hero
@@ -113,8 +113,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | LAYOUT-01 | Phase 1 | Pending |
-| LAYOUT-02 | Phase 1 | Pending |
-| LAYOUT-03 | Phase 1 | Pending |
+| LAYOUT-02 | Phase 1 | Complete |
+| LAYOUT-03 | Phase 1 | Complete |
 | LAYOUT-04 | Phase 4 | Pending |
 | HERO-01 | Phase 4 | Pending |
 | HERO-02 | Phase 4 | Pending |

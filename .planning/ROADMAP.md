@@ -34,7 +34,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans:** 3 plans
 Plans:
 - [x] 01-01-PLAN.md — Astro scaffolding, Tailwind CSS 4.x, design tokens, BaseLayout
-- [ ] 01-02-PLAN.md — Reusable components (Container, Section, Header, MobileNav, Footer)
+- [x] 01-02-PLAN.md — Reusable components (Container, Section, Header, MobileNav, Footer)
 - [ ] 01-03-PLAN.md — Page assembly, IntersectionObserver, GitHub Actions deployment, visual verification
 **UI hint**: yes
 
