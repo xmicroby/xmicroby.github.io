@@ -9,7 +9,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Layout & Navigation
 
-- [ ] **LAYOUT-01**: Site is fully responsive across mobile, tablet, and desktop viewports
+- [x] **LAYOUT-01**: Site is fully responsive across mobile, tablet, and desktop viewports
 - [x] **LAYOUT-02**: User can navigate between sections via clear anchor links with smooth scrolling
 - [x] **LAYOUT-03**: Header/nav remains accessible (sticky or scroll-to-top) on all pages
 - [ ] **LAYOUT-04**: Sections have scroll-triggered entrance transitions
@@ -75,7 +75,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **PERF-02**: Animations respect `prefers-reduced-motion` media query (paused/reduced when set)
 - [ ] **PERF-03**: SEO meta tags and Open Graph tags configured for social sharing
 - [x] **PERF-04**: Page loads under 2 seconds on a typical connection
-- [ ] **PERF-05**: Site deploys correctly to GitHub Pages via GitHub Actions
+- [x] **PERF-05**: Site deploys correctly to GitHub Pages via GitHub Actions
 
 ## v2 Requirements
 
@@ -112,7 +112,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| LAYOUT-01 | Phase 1 | Pending |
+| LAYOUT-01 | Phase 1 | Complete |
 | LAYOUT-02 | Phase 1 | Complete |
 | LAYOUT-03 | Phase 1 | Complete |
 | LAYOUT-04 | Phase 4 | Pending |
@@ -151,7 +151,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PERF-02 | Phase 6 | Pending |
 | PERF-03 | Phase 6 | Pending |
 | PERF-04 | Phase 1 | Complete |
-| PERF-05 | Phase 1 | Pending |
+| PERF-05 | Phase 1 | Complete |
 
 **Coverage:**
 - v1 requirements: 40 total
