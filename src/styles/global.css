@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+/* === Tailwind CSS 4.x Theme Registration === */
+@theme {
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-surface-elevated: var(--color-surface-elevated);
+  --color-border: var(--color-border);
+  --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-destructive: var(--color-destructive);
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* === Dark Mode (Default) — "Lab at Night" === */
+:root {
+  --color-bg: #0a0e17;
+  --color-surface: #131a2b;
+  --color-surface-elevated: #1a2340;
+  --color-border: #1e2d4a;
+  --color-text: #e8edf5;
+  --color-text-muted: #8892a8;
+  --color-accent: #4ecdc4;
+  --color-accent-hover: #3db8b0;
+  --color-destructive: #ef4444;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+}
+
+/* === Light Mode — "Clinical Clean" (variables defined, active in Phase 2) === */
+.light {
+  --color-bg: #f8fafb;
+  --color-surface: #ffffff;
+  --color-surface-elevated: #f0f4f7;
+  --color-border: #d4dde6;
+  --color-text: #111827;
+  --color-text-muted: #6b7280;
+  --color-accent: #0d9488;
+  --color-accent-hover: #0f766e;
+  --color-destructive: #dc2626;
+}
+
+/* === Base Styles === */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* === Typography Hierarchy (DESIGN-04) === */
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+h2, h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+/* === Responsive Typography === */
+@media (max-width: 1023px) {
+  h1 { font-size: 32px; }
+  h2, h3 { font-size: 22px; }
+}
+
+@media (max-width: 767px) {
+  h1 { font-size: 28px; }
+  h2, h3 { font-size: 20px; }
+}
+
+/* === Page Load Animation === */
+body {
+  animation: fadeIn 300ms ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* === Reduced Motion === */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0ms !important;
+    transition-duration: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}

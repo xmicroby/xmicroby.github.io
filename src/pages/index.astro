@@ -1,14 +1,10 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Youngbin Kim</title>
-  </head>
-  <body>
-    <h1>Hello</h1>
-  </body>
-</html>
+<BaseLayout>
+  <main>
+    <h1 class="text-[var(--color-text)]">Youngbin Kim</h1>
+    <p class="text-[var(--color-text-muted)] font-mono">LLM Engineer / Data Scientist (Clinical AI)</p>
+  </main>
+</BaseLayout>
