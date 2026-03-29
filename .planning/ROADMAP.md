@@ -31,7 +31,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Layout scales correctly across mobile, tablet, and desktop viewports
   4. Navigation links scroll smoothly between section anchors and remain accessible via sticky header
   5. Clinical data typography hierarchy (headings, body, monospace accents) is visually consistent across the site
-**Plans**: TBD
+**Plans:** 3 plans
+Plans:
+- [ ] 01-01-PLAN.md — Astro scaffolding, Tailwind CSS 4.x, design tokens, BaseLayout
+- [ ] 01-02-PLAN.md — Reusable components (Container, Section, Header, MobileNav, Footer)
+- [ ] 01-03-PLAN.md — Page assembly, IntersectionObserver, GitHub Actions deployment, visual verification
 **UI hint**: yes
 
 ### Phase 2: Theming Engine
@@ -104,7 +108,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Design System | 0/TBD | Not started | - |
+| 1. Foundation & Design System | 0/3 | Planned | - |
 | 2. Theming Engine | 0/TBD | Not started | - |
 | 3. Core Content Sections | 0/TBD | Not started | - |
 | 4. Hero & Waveform Motifs | 0/TBD | Not started | - |
