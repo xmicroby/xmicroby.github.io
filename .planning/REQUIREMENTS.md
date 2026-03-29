@@ -58,10 +58,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Design System
 
-- [ ] **DESIGN-01**: Clinical data aesthetic applied as unified design DNA (EHR-inspired typography, monospace accents, data visualization motifs)
+- [x] **DESIGN-01**: Clinical data aesthetic applied as unified design DNA (EHR-inspired typography, monospace accents, data visualization motifs)
 - [ ] **DESIGN-02**: Waveform motif used as section dividers throughout the site
-- [ ] **DESIGN-03**: Consistent color palette across both dark and light themes
-- [ ] **DESIGN-04**: Typography hierarchy established (headings, body, code/terminal, accent text)
+- [x] **DESIGN-03**: Consistent color palette across both dark and light themes
+- [x] **DESIGN-04**: Typography hierarchy established (headings, body, code/terminal, accent text)
 
 ### Easter Eggs
 
@@ -74,7 +74,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **PERF-01**: Site meets WCAG AA contrast and typography standards
 - [ ] **PERF-02**: Animations respect `prefers-reduced-motion` media query (paused/reduced when set)
 - [ ] **PERF-03**: SEO meta tags and Open Graph tags configured for social sharing
-- [ ] **PERF-04**: Page loads under 2 seconds on a typical connection
+- [x] **PERF-04**: Page loads under 2 seconds on a typical connection
 - [ ] **PERF-05**: Site deploys correctly to GitHub Pages via GitHub Actions
 
 ## v2 Requirements
@@ -140,17 +140,17 @@ Which phases cover which requirements. Updated during roadmap creation.
 | THEME-03 | Phase 2 | Pending |
 | THEME-04 | Phase 2 | Pending |
 | THEME-05 | Phase 2 | Pending |
-| DESIGN-01 | Phase 1 | Pending |
+| DESIGN-01 | Phase 1 | Complete |
 | DESIGN-02 | Phase 4 | Pending |
-| DESIGN-03 | Phase 1 | Pending |
-| DESIGN-04 | Phase 1 | Pending |
+| DESIGN-03 | Phase 1 | Complete |
+| DESIGN-04 | Phase 1 | Complete |
 | EASTER-01 | Phase 6 | Pending |
 | EASTER-02 | Phase 6 | Pending |
 | EASTER-03 | Phase 6 | Pending |
 | PERF-01 | Phase 6 | Pending |
 | PERF-02 | Phase 6 | Pending |
 | PERF-03 | Phase 6 | Pending |
-| PERF-04 | Phase 1 | Pending |
+| PERF-04 | Phase 1 | Complete |
 | PERF-05 | Phase 1 | Pending |
 
 **Coverage:**
