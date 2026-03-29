@@ -1,10 +1,83 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Section from '../components/Section.astro';
+import Container from '../components/Container.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <BaseLayout>
+  <Header />
+
   <main>
-    <h1 class="text-[var(--color-text)]">Youngbin Kim</h1>
-    <p class="text-[var(--color-text-muted)] font-mono">LLM Engineer / Data Scientist (Clinical AI)</p>
+    <!-- Hero Section: full viewport, centered content -->
+    <section id="home" class="min-h-screen flex items-center justify-center">
+      <Container>
+        <div class="text-center md:text-left">
+          <h1 class="text-[var(--color-text)]">Youngbin Kim</h1>
+          <p class="font-mono text-sm md:text-base text-[var(--color-text-muted)] mt-4 tracking-[0.04em]">
+            LLM Engineer / Data Scientist (Clinical AI)
+          </p>
+          <a
+            href="#projects"
+            class="inline-block mt-8 font-mono text-sm text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] transition-colors duration-200 border border-[var(--color-accent)] hover:border-[var(--color-accent-hover)] px-6 py-3 rounded"
+          >
+            View my work
+          </a>
+        </div>
+      </Container>
+    </section>
+
+    <!-- Placeholder Sections -->
+    <Section id="about" label="// about" title="About">
+      <p class="text-[var(--color-text-muted)]">This section is coming soon.</p>
+    </Section>
+
+    <Section id="experience" label="// experience" title="Experience">
+      <p class="text-[var(--color-text-muted)]">This section is coming soon.</p>
+    </Section>
+
+    <Section id="projects" label="// projects" title="Projects">
+      <p class="text-[var(--color-text-muted)]">This section is coming soon.</p>
+    </Section>
+
+    <Section id="contact" label="// contact" title="Contact">
+      <p class="text-[var(--color-text-muted)]">This section is coming soon.</p>
+    </Section>
   </main>
+
+  <Footer />
+
+  <!-- IntersectionObserver for active nav highlighting (per D-09) -->
+  <script>
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link[data-section], .mobile-nav-link[data-section]');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const sectionId = entry.target.getAttribute('id');
+
+            navLinks.forEach((link) => {
+              const linkSection = link.getAttribute('data-section');
+              if (linkSection === sectionId) {
+                link.classList.add('text-[var(--color-accent)]');
+                link.classList.remove('text-[var(--color-text-muted)]');
+              } else {
+                link.classList.remove('text-[var(--color-accent)]');
+                link.classList.add('text-[var(--color-text-muted)]');
+              }
+            });
+          }
+        });
+      },
+      {
+        rootMargin: '-80px 0px -50% 0px',
+        threshold: 0,
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+  </script>
 </BaseLayout>
