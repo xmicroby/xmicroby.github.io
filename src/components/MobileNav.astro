@@ -1,0 +1,69 @@
+---
+interface Props {
+  navLinks: Array<{ label: string; href: string }>;
+}
+
+const { navLinks } = Astro.props;
+---
+
+<div
+  id="mobile-nav"
+  class="fixed top-0 right-0 h-full w-[280px] bg-[var(--color-surface)] z-[60] transform translate-x-full transition-transform duration-[250ms] ease-out border-l border-[var(--color-border)]"
+  aria-hidden="true"
+>
+  <div class="flex flex-col pt-20 px-6 gap-6">
+    {navLinks.map(link => (
+      <a
+        href={link.href}
+        class="mobile-nav-link font-mono text-base text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors duration-200"
+        data-section={link.href.replace('#', '') || 'home'}
+      >
+        {link.label}
+      </a>
+    ))}
+  </div>
+</div>
+
+<!-- Overlay backdrop -->
+<div
+  id="mobile-nav-overlay"
+  class="fixed inset-0 bg-black/50 z-[55] hidden"
+  aria-hidden="true"
+></div>
+
+<script>
+  const toggle = document.getElementById('mobile-menu-toggle');
+  const nav = document.getElementById('mobile-nav');
+  const overlay = document.getElementById('mobile-nav-overlay');
+
+  function openMenu() {
+    nav?.classList.remove('translate-x-full');
+    nav?.setAttribute('aria-hidden', 'false');
+    overlay?.classList.remove('hidden');
+    toggle?.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeMenu() {
+    nav?.classList.add('translate-x-full');
+    nav?.setAttribute('aria-hidden', 'true');
+    overlay?.classList.add('hidden');
+    toggle?.setAttribute('aria-expanded', 'false');
+  }
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+    isOpen ? closeMenu() : openMenu();
+  });
+
+  overlay?.addEventListener('click', closeMenu);
+
+  // Close on nav link click
+  nav?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
+</script>

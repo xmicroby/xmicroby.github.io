@@ -1,0 +1,29 @@
+---
+import Container from './Container.astro';
+---
+
+<footer class="bg-[var(--color-surface)] border-t border-[var(--color-border)] py-12">
+  <Container>
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="font-mono text-sm text-[var(--color-text-muted)]">
+        &copy; 2026 Youngbin Kim
+      </p>
+      <div class="flex items-center gap-6">
+        <a
+          href="mailto:youngbin.kim@columbia.edu"
+          class="font-mono text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors duration-200"
+        >
+          youngbin.kim@columbia.edu
+        </a>
+        <a
+          href="https://www.linkedin.com/in/youngbinkim/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-mono text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors duration-200"
+        >
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </Container>
+</footer>
