@@ -40,8 +40,7 @@ Declared values (must be multiples of 4):
 | lg | 24px | Section internal padding, card padding |
 | xl | 32px | Layout column gaps, major component margins |
 | 2xl | 48px | Section vertical padding (mobile) |
-| 3xl | 64px | Section vertical padding (tablet) |
-| 4xl | 96px | Section vertical padding (desktop), page-level hero spacing |
+| 3xl | 64px | Section vertical padding (tablet + desktop) |
 
 Exceptions: Touch targets for nav links must be at least 44px × 44px (WCAG 2.5.8) regardless of visual size.
 
@@ -52,8 +51,8 @@ Exceptions: Touch targets for nav links must be at least 44px × 44px (WCAG 2.5.
 | Role | Font | Size | Weight | Line Height | Letter Spacing |
 |------|------|------|--------|-------------|----------------|
 | Body | Inter | 16px | 400 (regular) | 1.6 | 0 |
-| Label / Nav | Inter | 14px | 500 (medium) | 1.4 | 0.02em |
-| Heading (h2/h3) | Inter | 24px | 600 (semibold) | 1.25 | -0.01em |
+| Label / Nav | Inter | 14px | 400 (regular) | 1.4 | 0.02em |
+| Heading (h2/h3) | Inter | 24px | 700 (bold) | 1.25 | -0.01em |
 | Display (h1) | Inter | 40px | 700 (bold) | 1.15 | -0.02em |
 | Mono Accent | JetBrains Mono | 14px | 400 (regular) | 1.5 | 0.04em |
 
@@ -65,7 +64,8 @@ Exceptions: Touch targets for nav links must be at least 44px × 44px (WCAG 2.5.
 **Clinical data aesthetic rules (DESIGN-01):**
 - Mono accent (JetBrains Mono) is reserved for: section labels, navigation text, metadata annotations, data-like elements (dates, stats), and footer text
 - Body text is always Inter — never monospace for paragraphs (avoids accessibility pitfall from SUMMARY.md)
-- Headings are Inter semibold/bold — clean and professional, not stylized
+- Headings are Inter bold (700) — clean and professional, not stylized
+- Only 2 font weights are used across the entire site: 400 (regular) for body, labels, nav, and mono; 700 (bold) for headings and display
 
 ---
 
@@ -127,6 +127,10 @@ Accent is NOT used for: body text, headings, card backgrounds, borders at rest, 
 
 ## Layout Contract
 
+### Focal Point
+
+Primary visual anchor: **Hero section title** (Display typography, 40px bold Inter) with **"View my work" CTA** in accent color (`--color-accent`). The hero title is the first element a visitor reads; the CTA is the single accent-colored interactive element above the fold, drawing the eye and creating a clear call to action.
+
 ### Breakpoints
 
 | Name | Min Width | Max Content Width |
@@ -178,7 +182,7 @@ Accent is NOT used for: body text, headings, card backgrounds, borders at rest, 
 
 Each section in Phase 1 is a semantic `<section>` with:
 - `id` attribute matching nav anchor (e.g., `id="about"`)
-- Vertical padding: `96px` desktop, `64px` tablet, `48px` mobile
+- Vertical padding: `64px` desktop/tablet, `48px` mobile
 - Min-height: `50vh` (ensures sections are visible during scroll)
 - Placeholder content: Section title in Display typography + "Coming soon" in Body typography
 
@@ -265,7 +269,6 @@ All animations must respect `prefers-reduced-motion: reduce` — when set, repla
   --spacing-xl: 32px;
   --spacing-2xl: 48px;
   --spacing-3xl: 64px;
-  --spacing-4xl: 96px;
 }
 ```
 
