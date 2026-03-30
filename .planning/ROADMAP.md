@@ -48,7 +48,10 @@ Plans:
   3. User can toggle between modes via a visible control, and the switch is instant with no FOUC
   4. Theme preference persists across page reloads (returning visitors see their last choice)
   5. Color palette is consistent across both themes — no broken or unreadable elements in either mode
-**Plans**: TBD
+**Plans:** 2 plans
+Plans:
+- [ ] 02-01-PLAN.md — Theme infrastructure: CSS token inversion, FOUC-prevention script, sun/moon toggle
+- [ ] 02-02-PLAN.md — Visual QA of all components in both themes + human verification
 **UI hint**: yes
 
 ### Phase 3: Core Content Sections
@@ -109,7 +112,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Design System | 0/3 | Planned | - |
-| 2. Theming Engine | 0/TBD | Not started | - |
+| 2. Theming Engine | 0/2 | Planned | - |
 | 3. Core Content Sections | 0/TBD | Not started | - |
 | 4. Hero & Waveform Motifs | 0/TBD | Not started | - |
 | 5. BeatProfiler Case Study | 0/TBD | Not started | - |
