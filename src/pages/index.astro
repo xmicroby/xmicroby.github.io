@@ -30,7 +30,38 @@ import Footer from '../components/Footer.astro';
 
     <!-- Placeholder Sections -->
     <Section id="about" label="// about" title="About">
-      <p class="text-[var(--color-text-muted)]">This section is coming soon.</p>
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+        <div>
+          <p class="font-mono text-xs text-[var(--color-accent)] tracking-[0.08em] uppercase mb-4">Who I Am</p>
+          <p class="text-base text-[var(--color-text)] leading-relaxed mb-4">
+            I'm a Senior Data Scientist at New York-Presbyterian, where I was the first dedicated LLM hire. I build HIPAA-compliant LLM infrastructure, clinical NLP pipelines, and agentic workflows that help clinicians make better decisions. I earned my PhD in Biomedical Engineering from Columbia University in 2024, focusing on machine learning approaches to cardiac signal analysis.
+          </p>
+          <p class="text-base text-[var(--color-text)] leading-relaxed">
+            Before NYP, I interned at Genentech building ML models and studied Bioengineering and EECS at UC Berkeley. I've published 9 peer-reviewed papers and built BeatProfiler, an open-source ML platform for cardiac analysis adopted by researchers at Harvard, MIT, Cornell, and Columbia. When I'm not wrangling data, you'll find me singing with the Young New Yorkers' Chorus, biking across the city, or planning my next trip.
+          </p>
+        </div>
+        <div>
+          <p class="font-mono text-xs text-[var(--color-accent)] tracking-[0.08em] uppercase mb-4">What I Do</p>
+          <ul class="space-y-4">
+            <li class="p-4 rounded-lg bg-[var(--color-surface-elevated)] border border-[var(--color-border)]">
+              <p class="font-mono text-sm text-[var(--color-accent)] mb-1">LLM Engineering</p>
+              <p class="text-sm text-[var(--color-text-muted)]">HIPAA-compliant infrastructure, RAG pipelines, agentic workflows</p>
+            </li>
+            <li class="p-4 rounded-lg bg-[var(--color-surface-elevated)] border border-[var(--color-border)]">
+              <p class="font-mono text-sm text-[var(--color-accent)] mb-1">Clinical NLP</p>
+              <p class="text-sm text-[var(--color-text-muted)]">Medical text extraction, clinical decision support, EHR integration</p>
+            </li>
+            <li class="p-4 rounded-lg bg-[var(--color-surface-elevated)] border border-[var(--color-border)]">
+              <p class="font-mono text-sm text-[var(--color-accent)] mb-1">Cardiac Signal Analysis</p>
+              <p class="text-sm text-[var(--color-text-muted)]">ML for ECG/calcium transient signals, BeatProfiler platform</p>
+            </li>
+            <li class="p-4 rounded-lg bg-[var(--color-surface-elevated)] border border-[var(--color-border)]">
+              <p class="font-mono text-sm text-[var(--color-accent)] mb-1">Data Science</p>
+              <p class="text-sm text-[var(--color-text-muted)]">Python, deep learning, statistical modeling, 9 publications</p>
+            </li>
+          </ul>
+        </div>
+      </div>
     </Section>
 
     <Section id="experience" label="// experience" title="Experience">
