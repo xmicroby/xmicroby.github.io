@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [ ] **Phase 1: Foundation & Design System** - Astro scaffolding, responsive layout shell, design tokens, and GitHub Pages deployment
 - [ ] **Phase 2: Theming Engine** - Dark/light mode with distinct personalities, toggle, FOUC prevention, and persistence
-- [ ] **Phase 3: Core Content Sections** - About, Experience timeline, and Contact — the professional narrative
+- [x] **Phase 3: Core Content Sections** - About, Experience timeline, and Contact — the professional narrative (completed 2026-03-30)
 - [ ] **Phase 4: Hero & Waveform Motifs** - Terminal typing animation, waveform backgrounds, section dividers, and scroll transitions
 - [ ] **Phase 5: BeatProfiler Case Study** - Deep-dive project section with pipeline diagrams, cardiac visualizations, and impact metrics
 - [ ] **Phase 6: Polish, Accessibility & Easter Eggs** - WCAG compliance, motion preferences, SEO, and discoverable hobby touches
@@ -64,10 +64,10 @@ Plans:
   3. Experience timeline displays NYP, Columbia, and Genentech roles with titles, dates, and key achievements
   4. Email link (youngbin.kim@columbia.edu) and LinkedIn link are visible, functional, and open correctly
   5. Footer presents contact information cleanly with optional copyright
-**Plans:** 2 plans
+**Plans:** 2/2 plans complete
 Plans:
 - [x] 03-01-PLAN.md — Nav cleanup (remove Contact) + About section with professional narrative
-- [ ] 03-02-PLAN.md — Experience timeline (horizontal data-viz) + visual verification
+- [x] 03-02-PLAN.md — Experience timeline (horizontal data-viz) + visual verification
 **UI hint**: yes
 
 ### Phase 4: Hero & Waveform Motifs
@@ -116,7 +116,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 |-------|----------------|--------|-----------|
 | 1. Foundation & Design System | 0/3 | Planned | - |
 | 2. Theming Engine | 0/2 | Planned | - |
-| 3. Core Content Sections | 0/2 | Planned | - |
+| 3. Core Content Sections | 2/2 | Complete   | 2026-03-30 |
 | 4. Hero & Waveform Motifs | 0/TBD | Not started | - |
 | 5. BeatProfiler Case Study | 0/TBD | Not started | - |
 | 6. Polish, Accessibility & Easter Eggs | 0/TBD | Not started | - |

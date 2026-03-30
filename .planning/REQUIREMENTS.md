@@ -38,9 +38,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Experience
 
-- [ ] **EXP-01**: Timeline displays roles at NYP (Senior Data Scientist), Columbia (PhD), and Genentech (ML Intern)
-- [ ] **EXP-02**: Each role shows title, dates, and key achievements
-- [ ] **EXP-03**: Timeline styled with clinical data aesthetic consistent with site design
+- [x] **EXP-01**: Timeline displays roles at NYP (Senior Data Scientist), Columbia (PhD), and Genentech (ML Intern)
+- [x] **EXP-02**: Each role shows title, dates, and key achievements
+- [x] **EXP-03**: Timeline styled with clinical data aesthetic consistent with site design
 
 ### Contact
 
@@ -129,9 +129,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PROJ-03 | Phase 5 | Pending |
 | PROJ-04 | Phase 5 | Pending |
 | PROJ-05 | Phase 5 | Pending |
-| EXP-01 | Phase 3 | Pending |
-| EXP-02 | Phase 3 | Pending |
-| EXP-03 | Phase 3 | Pending |
+| EXP-01 | Phase 3 | Complete |
+| EXP-02 | Phase 3 | Complete |
+| EXP-03 | Phase 3 | Complete |
 | CONTACT-01 | Phase 3 | Complete |
 | CONTACT-02 | Phase 3 | Complete |
 | CONTACT-03 | Phase 3 | Complete |
