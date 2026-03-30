@@ -64,7 +64,10 @@ Plans:
   3. Experience timeline displays NYP, Columbia, and Genentech roles with titles, dates, and key achievements
   4. Email link (youngbin.kim@columbia.edu) and LinkedIn link are visible, functional, and open correctly
   5. Footer presents contact information cleanly with optional copyright
-**Plans**: TBD
+**Plans:** 2 plans
+Plans:
+- [ ] 03-01-PLAN.md — Nav cleanup (remove Contact) + About section with professional narrative
+- [ ] 03-02-PLAN.md — Experience timeline (horizontal data-viz) + visual verification
 **UI hint**: yes
 
 ### Phase 4: Hero & Waveform Motifs
@@ -113,7 +116,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 |-------|----------------|--------|-----------|
 | 1. Foundation & Design System | 0/3 | Planned | - |
 | 2. Theming Engine | 0/2 | Planned | - |
-| 3. Core Content Sections | 0/TBD | Not started | - |
+| 3. Core Content Sections | 0/2 | Planned | - |
 | 4. Hero & Waveform Motifs | 0/TBD | Not started | - |
 | 5. BeatProfiler Case Study | 0/TBD | Not started | - |
 | 6. Polish, Accessibility & Easter Eggs | 0/TBD | Not started | - |
