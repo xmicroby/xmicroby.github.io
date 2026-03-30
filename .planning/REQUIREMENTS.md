@@ -24,9 +24,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### About
 
-- [ ] **ABOUT-01**: Professional background summary covering current role at NYP, Columbia PhD, and expertise areas
-- [ ] **ABOUT-02**: Personality woven into professional narrative (hobbies mentioned naturally, not as a separate section)
-- [ ] **ABOUT-03**: Clinical data aesthetic typography (EHR-inspired fonts/spacing) applied to about section
+- [x] **ABOUT-01**: Professional background summary covering current role at NYP, Columbia PhD, and expertise areas
+- [x] **ABOUT-02**: Personality woven into professional narrative (hobbies mentioned naturally, not as a separate section)
+- [x] **ABOUT-03**: Clinical data aesthetic typography (EHR-inspired fonts/spacing) applied to about section
 
 ### Projects
 
@@ -44,9 +44,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Contact
 
-- [ ] **CONTACT-01**: Email link (youngbin.kim@columbia.edu) displayed and functional
-- [ ] **CONTACT-02**: LinkedIn profile link displayed and functional
-- [ ] **CONTACT-03**: Clean footer with contact info and optional copyright
+- [x] **CONTACT-01**: Email link (youngbin.kim@columbia.edu) displayed and functional
+- [x] **CONTACT-02**: LinkedIn profile link displayed and functional
+- [x] **CONTACT-03**: Clean footer with contact info and optional copyright
 
 ### Theming
 
@@ -121,9 +121,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | HERO-03 | Phase 4 | Pending |
 | HERO-04 | Phase 4 | Pending |
 | HERO-05 | Phase 4 | Pending |
-| ABOUT-01 | Phase 3 | Pending |
-| ABOUT-02 | Phase 3 | Pending |
-| ABOUT-03 | Phase 3 | Pending |
+| ABOUT-01 | Phase 3 | Complete |
+| ABOUT-02 | Phase 3 | Complete |
+| ABOUT-03 | Phase 3 | Complete |
 | PROJ-01 | Phase 5 | Pending |
 | PROJ-02 | Phase 5 | Pending |
 | PROJ-03 | Phase 5 | Pending |
@@ -132,9 +132,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | EXP-01 | Phase 3 | Pending |
 | EXP-02 | Phase 3 | Pending |
 | EXP-03 | Phase 3 | Pending |
-| CONTACT-01 | Phase 3 | Pending |
-| CONTACT-02 | Phase 3 | Pending |
-| CONTACT-03 | Phase 3 | Pending |
+| CONTACT-01 | Phase 3 | Complete |
+| CONTACT-02 | Phase 3 | Complete |
+| CONTACT-03 | Phase 3 | Complete |
 | THEME-01 | Phase 2 | Complete |
 | THEME-02 | Phase 2 | Complete |
 | THEME-03 | Phase 2 | Complete |

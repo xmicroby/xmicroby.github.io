@@ -66,7 +66,7 @@ Plans:
   5. Footer presents contact information cleanly with optional copyright
 **Plans:** 2 plans
 Plans:
-- [ ] 03-01-PLAN.md — Nav cleanup (remove Contact) + About section with professional narrative
+- [x] 03-01-PLAN.md — Nav cleanup (remove Contact) + About section with professional narrative
 - [ ] 03-02-PLAN.md — Experience timeline (horizontal data-viz) + visual verification
 **UI hint**: yes
 
