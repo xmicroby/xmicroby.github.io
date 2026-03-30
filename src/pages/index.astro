@@ -65,7 +65,69 @@ import Footer from '../components/Footer.astro';
     </Section>
 
     <Section id="experience" label="// experience" title="Experience">
-      <p class="text-[var(--color-text-muted)]">This section is coming soon.</p>
+      <div class="relative">
+        <!-- Horizontal connecting line (desktop only) -->
+        <div class="hidden md:block absolute top-[28px] left-0 right-0 h-[2px] bg-[var(--color-border)]" aria-hidden="true"></div>
+
+        <!-- Timeline grid -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-4">
+
+          <!-- Stop 1: NYP -->
+          <div class="relative">
+            <!-- Timeline dot (desktop) -->
+            <div class="hidden md:flex w-3 h-3 rounded-full bg-[var(--color-accent)] border-2 border-[var(--color-surface)] mb-4 relative z-10" aria-hidden="true"></div>
+            <!-- Mobile timeline dot + line -->
+            <div class="md:hidden absolute left-0 top-0 bottom-0 w-[2px] bg-[var(--color-border)]" aria-hidden="true"></div>
+            <div class="md:hidden absolute left-[-4px] top-1 w-[10px] h-[10px] rounded-full bg-[var(--color-accent)] border-2 border-[var(--color-surface)] z-10" aria-hidden="true"></div>
+            <div class="md:pl-0 pl-6">
+              <p class="font-mono text-xs text-[var(--color-accent)] tracking-[0.08em]">2024 – Present</p>
+              <p class="font-semibold text-[var(--color-text)] mt-1">Senior Data Scientist</p>
+              <p class="font-mono text-sm text-[var(--color-text-muted)] mt-0.5">New York-Presbyterian</p>
+              <p class="text-sm text-[var(--color-text-muted)] mt-2 leading-relaxed">First dedicated LLM hire. Built HIPAA-compliant LLM infrastructure, clinical NLP pipelines, and agentic workflows.</p>
+            </div>
+          </div>
+
+          <!-- Stop 2: Columbia -->
+          <div class="relative">
+            <div class="hidden md:flex w-3 h-3 rounded-full bg-[var(--color-accent)] border-2 border-[var(--color-surface)] mb-4 relative z-10" aria-hidden="true"></div>
+            <div class="md:hidden absolute left-0 top-0 bottom-0 w-[2px] bg-[var(--color-border)]" aria-hidden="true"></div>
+            <div class="md:hidden absolute left-[-4px] top-1 w-[10px] h-[10px] rounded-full bg-[var(--color-accent)] border-2 border-[var(--color-surface)] z-10" aria-hidden="true"></div>
+            <div class="md:pl-0 pl-6">
+              <p class="font-mono text-xs text-[var(--color-accent)] tracking-[0.08em]">2019 – 2024</p>
+              <p class="font-semibold text-[var(--color-text)] mt-1">PhD, Biomedical Engineering</p>
+              <p class="font-mono text-sm text-[var(--color-text-muted)] mt-0.5">Columbia University</p>
+              <p class="text-sm text-[var(--color-text-muted)] mt-2 leading-relaxed">ML for cardiac signal analysis. Created BeatProfiler. 9 peer-reviewed publications including IEEE.</p>
+            </div>
+          </div>
+
+          <!-- Stop 3: Genentech -->
+          <div class="relative">
+            <div class="hidden md:flex w-3 h-3 rounded-full bg-[var(--color-accent)] border-2 border-[var(--color-surface)] mb-4 relative z-10" aria-hidden="true"></div>
+            <div class="md:hidden absolute left-0 top-0 bottom-0 w-[2px] bg-[var(--color-border)]" aria-hidden="true"></div>
+            <div class="md:hidden absolute left-[-4px] top-1 w-[10px] h-[10px] rounded-full bg-[var(--color-accent)] border-2 border-[var(--color-surface)] z-10" aria-hidden="true"></div>
+            <div class="md:pl-0 pl-6">
+              <p class="font-mono text-xs text-[var(--color-accent)] tracking-[0.08em]">2022</p>
+              <p class="font-semibold text-[var(--color-text)] mt-1">Machine Learning Intern</p>
+              <p class="font-mono text-sm text-[var(--color-text-muted)] mt-0.5">Genentech</p>
+              <p class="text-sm text-[var(--color-text-muted)] mt-2 leading-relaxed">Built ML models for drug development pipelines.</p>
+            </div>
+          </div>
+
+          <!-- Stop 4: UC Berkeley -->
+          <div class="relative">
+            <div class="hidden md:flex w-3 h-3 rounded-full bg-[var(--color-accent)] border-2 border-[var(--color-surface)] mb-4 relative z-10" aria-hidden="true"></div>
+            <div class="md:hidden absolute left-0 top-0 bottom-0 w-[2px] bg-[var(--color-border)]" aria-hidden="true"></div>
+            <div class="md:hidden absolute left-[-4px] top-1 w-[10px] h-[10px] rounded-full bg-[var(--color-accent)] border-2 border-[var(--color-surface)] z-10" aria-hidden="true"></div>
+            <div class="md:pl-0 pl-6">
+              <p class="font-mono text-xs text-[var(--color-accent)] tracking-[0.08em]">2015 – 2019</p>
+              <p class="font-semibold text-[var(--color-text)] mt-1">BS, Bioengineering & EECS</p>
+              <p class="font-mono text-sm text-[var(--color-text-muted)] mt-0.5">UC Berkeley</p>
+              <p class="text-sm text-[var(--color-text-muted)] mt-2 leading-relaxed">Foundation in engineering and computer science.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </Section>
 
     <Section id="projects" label="// projects" title="Projects">
