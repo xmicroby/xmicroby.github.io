@@ -26,7 +26,7 @@ Visitors immediately understand who Youngbin is professionally (clinical AI / LL
 - [ ] Experience timeline (NYP, Columbia PhD, Genentech internship)
 - [ ] Contact section with email and LinkedIn (no Facebook)
 - [ ] Hobby easter eggs: YNYC choir link (ynyc.org), biking/travel touches — discoverable, not prominent
-- [ ] Dark/light mode with distinct personalities (dark = "lab at night", light = clinical/clean)
+- [x] Dark/light mode with distinct personalities (dark = "lab at night", light = clinical/clean) — Validated in Phase 2: Theming Engine
 - [ ] Responsive design refinement (content-level responsive testing across breakpoints)
 - [ ] Static site compatible with GitHub Pages hosting (deployment verified)
 
@@ -40,7 +40,7 @@ Visitors immediately understand who Youngbin is professionally (clinical AI / LL
 
 ## Context
 
-- **Existing site:** Astro-powered site shell at youngbinkim.com (xmicroby.github.io). Phase 1 complete: dark mode design system, sticky navigation, responsive layout, GitHub Actions deployment. Old index.html and assets still in repo root (cleanup deferred).
+- **Existing site:** Astro-powered site shell at youngbinkim.com (xmicroby.github.io). Phase 1 complete: design system, sticky navigation, responsive layout, GitHub Actions deployment. Phase 2 complete: dark/light theming engine with FOUC prevention, toggle, and localStorage persistence. Old index.html and assets still in repo root (cleanup deferred).
 - **Professional background:** PhD in Biomedical Engineering from Columbia (2024). First dedicated LLM hire at NYP. Built HIPAA-compliant LLM infrastructure, clinical NLP pipelines, agentic workflows. 9 peer-reviewed publications. Prior: Genentech ML intern, UC Berkeley BioE/EECS.
 - **BeatProfiler:** Open-source ML platform for cardiac signal analysis (beatprofiler.github.io). 521 downloads, adopted at Harvard/MIT/Cornell/Columbia. IEEE published. Rich visual content available (cardiac waveforms, video analysis, pipeline diagrams).
 - **Personal interests:** Member of Young New Yorkers' Chorus (ynyc.org), biking, traveling, singing.
@@ -62,7 +62,7 @@ Visitors immediately understand who Youngbin is professionally (clinical AI / LL
 | Clinical data aesthetic as design DNA | Unique to Youngbin's background, avoids generic portfolio look | ✓ Phase 1 |
 | Waveform motif as unifying design thread | Connects cardiac signals (work), NLP data (work), and music (personal) naturally | — Pending |
 | BeatProfiler as sole case study | Only non-proprietary project with rich visuals and public site | — Pending |
-| Dark/light mode | Adds personality (lab at night vs clinical clean) and modern UX | — Pending |
+| Dark/light mode | Adds personality (lab at night vs clinical clean) and modern UX | ✓ Phase 2 |
 | Static site on GitHub Pages | Simple deployment, already configured, no backend needed | ✓ Phase 1 |
 
 ## Evolution
@@ -83,4 +83,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-29 after Phase 1 completion*
+*Last updated: 2026-03-29 after Phase 2 completion*
