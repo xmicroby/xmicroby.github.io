@@ -15,18 +15,18 @@ Visitors immediately understand who Youngbin is professionally (clinical AI / LL
 - [x] Responsive design (mobile + desktop) — Validated in Phase 1: Foundation & Design System
 - [x] Static site compatible with GitHub Pages hosting — Validated in Phase 1: Foundation & Design System
 - [x] Clinical data aesthetic as the design DNA (EHR-inspired typography, data viz motifs) — Foundation validated in Phase 1 (design tokens, typography hierarchy)
+- [x] Dark/light mode with distinct personalities (dark = "lab at night", light = clinical/clean) — Validated in Phase 2: Theming Engine
+- [x] About section: professional background + personality (hobbies woven in, not separated) — Validated in Phase 3: Core Content Sections
+- [x] Experience timeline (NYP, Columbia PhD, Genentech internship) — Validated in Phase 3: Core Content Sections
+- [x] Contact section with email and LinkedIn (no Facebook) — Validated in Phase 3: Core Content Sections
 
 ### Active
 
 - [ ] Terminal-style hero intro with typing animation revealing professional identity
 
 - [ ] Waveform design motif throughout the site (section dividers, hover effects, background elements) — ties cardiac signals, NLP data, and music together
-- [ ] About section: professional background + personality (hobbies woven in, not separated)
 - [ ] Projects section with BeatProfiler as a deep-dive case study (pipeline diagram, cardiac signal visuals, impact metrics)
-- [ ] Experience timeline (NYP, Columbia PhD, Genentech internship)
-- [ ] Contact section with email and LinkedIn (no Facebook)
 - [ ] Hobby easter eggs: YNYC choir link (ynyc.org), biking/travel touches — discoverable, not prominent
-- [x] Dark/light mode with distinct personalities (dark = "lab at night", light = clinical/clean) — Validated in Phase 2: Theming Engine
 - [ ] Responsive design refinement (content-level responsive testing across breakpoints)
 - [ ] Static site compatible with GitHub Pages hosting (deployment verified)
 
@@ -40,7 +40,7 @@ Visitors immediately understand who Youngbin is professionally (clinical AI / LL
 
 ## Context
 
-- **Existing site:** Astro-powered site shell at youngbinkim.com (xmicroby.github.io). Phase 1 complete: design system, sticky navigation, responsive layout, GitHub Actions deployment. Phase 2 complete: dark/light theming engine with FOUC prevention, toggle, and localStorage persistence. Old index.html and assets still in repo root (cleanup deferred).
+- **Existing site:** Astro-powered site shell at youngbinkim.com (xmicroby.github.io). Phase 1 complete: design system, responsive layout. Phase 2 complete: dark/light theming engine. Phase 3 complete: About section and Experience timeline built, contact delegated to footer. Old index.html and assets still in repo root (cleanup deferred).
 - **Professional background:** PhD in Biomedical Engineering from Columbia (2024). First dedicated LLM hire at NYP. Built HIPAA-compliant LLM infrastructure, clinical NLP pipelines, agentic workflows. 9 peer-reviewed publications. Prior: Genentech ML intern, UC Berkeley BioE/EECS.
 - **BeatProfiler:** Open-source ML platform for cardiac signal analysis (beatprofiler.github.io). 521 downloads, adopted at Harvard/MIT/Cornell/Columbia. IEEE published. Rich visual content available (cardiac waveforms, video analysis, pipeline diagrams).
 - **Personal interests:** Member of Young New Yorkers' Chorus (ynyc.org), biking, traveling, singing.
@@ -58,12 +58,13 @@ Visitors immediately understand who Youngbin is professionally (clinical AI / LL
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Title: "LLM Engineer / Data Scientist (Clinical AI)" | Covers LLM engineering, data science, and clinical AI domain in one line | — Pending |
+| Title: "LLM Engineer / Data Scientist (Clinical AI)" | Covers LLM engineering, data science, and clinical AI domain in one line | ✓ Phase 3 |
 | Clinical data aesthetic as design DNA | Unique to Youngbin's background, avoids generic portfolio look | ✓ Phase 1 |
 | Waveform motif as unifying design thread | Connects cardiac signals (work), NLP data (work), and music (personal) naturally | — Pending |
 | BeatProfiler as sole case study | Only non-proprietary project with rich visuals and public site | — Pending |
 | Dark/light mode | Adds personality (lab at night vs clinical clean) and modern UX | ✓ Phase 2 |
 | Static site on GitHub Pages | Simple deployment, already configured, no backend needed | ✓ Phase 1 |
+| About & Timeline design | Kept focused (4 stops) with clinical aesthetic; hobbies subtly woven into bio | ✓ Phase 3 |
 
 ## Evolution
 
@@ -83,4 +84,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-29 after Phase 2 completion*
+*Last updated: 2026-03-30 after Phase 3 completion*
