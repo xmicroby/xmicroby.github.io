@@ -51,7 +51,7 @@ Plans:
 **Plans:** 2 plans
 Plans:
 - [x] 02-01-PLAN.md — Theme infrastructure: CSS token inversion, FOUC-prevention script, sun/moon toggle
-- [ ] 02-02-PLAN.md — Visual QA of all components in both themes + human verification
+- [x] 02-02-PLAN.md — Visual QA of all components in both themes + human verification
 **UI hint**: yes
 
 ### Phase 3: Core Content Sections
