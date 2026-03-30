@@ -50,7 +50,7 @@ Plans:
   5. Color palette is consistent across both themes — no broken or unreadable elements in either mode
 **Plans:** 2 plans
 Plans:
-- [ ] 02-01-PLAN.md — Theme infrastructure: CSS token inversion, FOUC-prevention script, sun/moon toggle
+- [x] 02-01-PLAN.md — Theme infrastructure: CSS token inversion, FOUC-prevention script, sun/moon toggle
 - [ ] 02-02-PLAN.md — Visual QA of all components in both themes + human verification
 **UI hint**: yes
 

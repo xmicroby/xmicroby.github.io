@@ -50,11 +50,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Theming
 
-- [ ] **THEME-01**: Dark mode ("lab at night" aesthetic) implemented as default or user-preferred
-- [ ] **THEME-02**: Light mode ("clinical clean" aesthetic) available as alternative
-- [ ] **THEME-03**: Theme toggle allows user to switch between dark and light modes
-- [ ] **THEME-04**: Inline blocking script prevents flash of unstyled content (FOUC) on load
-- [ ] **THEME-05**: Theme preference persists across page reloads (localStorage)
+- [x] **THEME-01**: Dark mode ("lab at night" aesthetic) implemented as default or user-preferred
+- [x] **THEME-02**: Light mode ("clinical clean" aesthetic) available as alternative
+- [x] **THEME-03**: Theme toggle allows user to switch between dark and light modes
+- [x] **THEME-04**: Inline blocking script prevents flash of unstyled content (FOUC) on load
+- [x] **THEME-05**: Theme preference persists across page reloads (localStorage)
 
 ### Design System
 
@@ -135,11 +135,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CONTACT-01 | Phase 3 | Pending |
 | CONTACT-02 | Phase 3 | Pending |
 | CONTACT-03 | Phase 3 | Pending |
-| THEME-01 | Phase 2 | Pending |
-| THEME-02 | Phase 2 | Pending |
-| THEME-03 | Phase 2 | Pending |
-| THEME-04 | Phase 2 | Pending |
-| THEME-05 | Phase 2 | Pending |
+| THEME-01 | Phase 2 | Complete |
+| THEME-02 | Phase 2 | Complete |
+| THEME-03 | Phase 2 | Complete |
+| THEME-04 | Phase 2 | Complete |
+| THEME-05 | Phase 2 | Complete |
 | DESIGN-01 | Phase 1 | Complete |
 | DESIGN-02 | Phase 4 | Pending |
 | DESIGN-03 | Phase 1 | Complete |
