@@ -16,17 +16,17 @@
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
-/* === Dark Mode (Default) — "Lab at Night" === */
+/* === Light Mode (Default) — "Clinical Clean" === */
 :root {
-  --color-bg: #0a0e17;
-  --color-surface: #131a2b;
-  --color-surface-elevated: #1a2340;
-  --color-border: #1e2d4a;
-  --color-text: #e8edf5;
-  --color-text-muted: #8892a8;
-  --color-accent: #4ecdc4;
-  --color-accent-hover: #3db8b0;
-  --color-destructive: #ef4444;
+  --color-bg: #f8fafb;
+  --color-surface: #ffffff;
+  --color-surface-elevated: #f0f4f7;
+  --color-border: #d4dde6;
+  --color-text: #111827;
+  --color-text-muted: #6b7280;
+  --color-accent: #0d9488;
+  --color-accent-hover: #0f766e;
+  --color-destructive: #dc2626;
 
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
@@ -40,17 +40,23 @@
   --spacing-3xl: 64px;
 }
 
-/* === Light Mode — "Clinical Clean" (variables defined, active in Phase 2) === */
-.light {
-  --color-bg: #f8fafb;
-  --color-surface: #ffffff;
-  --color-surface-elevated: #f0f4f7;
-  --color-border: #d4dde6;
-  --color-text: #111827;
-  --color-text-muted: #6b7280;
-  --color-accent: #0d9488;
-  --color-accent-hover: #0f766e;
-  --color-destructive: #dc2626;
+/* === Dark Mode — "Lab at Night" === */
+.dark {
+  --color-bg: #0a0e17;
+  --color-surface: #131a2b;
+  --color-surface-elevated: #1a2340;
+  --color-border: #1e2d4a;
+  --color-text: #e8edf5;
+  --color-text-muted: #8892a8;
+  --color-accent: #4ecdc4;
+  --color-accent-hover: #3db8b0;
+  --color-destructive: #ef4444;
+}
+
+/* === Theme Transitions (D-03) === */
+html.theme-ready body,
+html.theme-ready body * {
+  transition: background-color 250ms ease, color 250ms ease, border-color 250ms ease;
 }
 
 /* === Base Styles === */
@@ -65,6 +71,7 @@ body {
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.6;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
