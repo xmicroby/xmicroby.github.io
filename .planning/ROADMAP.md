@@ -71,16 +71,19 @@ Plans:
 **UI hint**: yes
 
 ### Phase 4: Hero & Waveform Motifs
-**Goal**: The site opens with a striking terminal-style animation that reveals Youngbin's identity, backed by animated waveforms that carry through the entire site as visual connective tissue
+**Goal**: The site opens with a striking terminal-style typing animation that reveals Youngbin's identity, with staggered "data loading" scroll reveals on all content sections — waveform motifs tabled per user decision
 **Depends on**: Phase 3
-**Requirements**: HERO-01, HERO-02, HERO-03, HERO-04, HERO-05, DESIGN-02, LAYOUT-04
+**Requirements**: HERO-01, HERO-02, HERO-04, HERO-05, LAYOUT-04 (HERO-03 and DESIGN-02 tabled — waveforms cancelled)
 **Success Criteria** (what must be TRUE):
   1. Hero displays "Youngbin Kim" and "LLM Engineer / Data Scientist (Clinical AI)" via a terminal-style typing animation on page load
-  2. Animated waveform element is visible in the hero background, connecting cardiac/NLP/music themes
-  3. Hero includes a clear call-to-action that invites the user to scroll down or jump to work
-  4. Terminal typing content is readable by screen readers and indexed by search engines (not DOM-injected empty text)
-  5. Waveform motif appears as section dividers throughout the site, and sections have scroll-triggered entrance transitions
-**Plans**: TBD
+  2. Hero includes a clear call-to-action that invites the user to scroll down or jump to work
+  3. Terminal typing content is readable by screen readers and indexed by search engines (not DOM-injected empty text)
+  4. Sections have scroll-triggered staggered entrance transitions ("data loading" effect)
+  5. All animations respect prefers-reduced-motion
+**Plans:** 2 plans
+Plans:
+- [ ] 04-01-PLAN.md — React integration setup + accessible TerminalHero typewriter component
+- [ ] 04-02-PLAN.md — ScrollReveal staggered entrance animations + visual verification
 **UI hint**: yes
 
 ### Phase 5: BeatProfiler Case Study
@@ -117,6 +120,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 1. Foundation & Design System | 0/3 | Planned | - |
 | 2. Theming Engine | 0/2 | Planned | - |
 | 3. Core Content Sections | 2/2 | Complete   | 2026-03-30 |
-| 4. Hero & Waveform Motifs | 0/TBD | Not started | - |
+| 4. Hero & Waveform Motifs | 0/2 | Planned | - |
 | 5. BeatProfiler Case Study | 0/TBD | Not started | - |
 | 6. Polish, Accessibility & Easter Eggs | 0/TBD | Not started | - |
