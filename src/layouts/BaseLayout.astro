@@ -4,12 +4,16 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
 }
 
 const {
   title = 'Youngbin Kim — LLM Engineer / Data Scientist (Clinical AI)',
   description = 'Personal portfolio of Youngbin Kim, LLM Engineer and Data Scientist specializing in Clinical AI at New York-Presbyterian.',
+  image = '/og-image.svg',
 } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, 'https://youngbinkim.com');
 ---
 
 <!doctype html>
@@ -36,6 +40,25 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light dark" />
     <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL.href} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, 'https://youngbinkim.com').href} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(image, 'https://youngbinkim.com').href} />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={canonicalURL.href} />
+
     <title>{title}</title>
 
     <!-- Google Fonts: Inter (variable 400,700) + JetBrains Mono (400) -->
