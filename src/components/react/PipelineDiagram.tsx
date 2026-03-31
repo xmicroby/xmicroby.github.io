@@ -10,6 +10,19 @@ interface PipelineStep {
 
 const steps: PipelineStep[] = [
   {
+    id: 0,
+    name: 'Video Input (Optional)',
+    description: 'Extract time-series signal directly from cardiomyocyte video recordings',
+    icon: (
+      <svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <rect x="2" y="5" width="16" height="10" rx="1" />
+        <circle cx="10" cy="10" r="2" />
+        <line x1="6" y1="5" x2="6" y2="15" />
+        <line x1="14" y1="5" x2="14" y2="15" />
+      </svg>
+    ),
+  },
+  {
     id: 1,
     name: 'Raw Signal Input',
     description: 'Calcium transient & field potential recordings',
@@ -118,7 +131,7 @@ export default function PipelineDiagram() {
   // Reduced motion: show all steps expanded, no animations
   if (prefersReducedMotion) {
     return (
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-3 md:gap-2 w-full">
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-3 md:gap-2 w-full md:justify-center flex-wrap">
         {steps.map((step, i) => (
           <div key={step.id} className="flex flex-col md:flex-row items-center gap-3 md:gap-2">
             <div
@@ -158,7 +171,7 @@ export default function PipelineDiagram() {
 
   return (
     <motion.div
-      className="flex flex-col md:flex-row items-center md:items-start gap-3 md:gap-2 w-full"
+      className="flex flex-col md:flex-row items-center md:items-start gap-3 md:gap-2 w-full md:justify-center flex-wrap"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: '-40px' }}

@@ -94,6 +94,12 @@ Recent decisions affecting current work:
 
 None yet.
 
+### Quick Tasks Completed
+
+| # | Description | Date | Commit | Directory |
+|---|-------------|------|--------|-----------|
+| 260331-jx0 | Fix BeatProfiler alignment under Projects and add optional step 0 (video input) to Processing Pipeline | 2026-03-31 | 82af6ed | [260331-jx0-fix-beatprofiler-alignment-under-project](./quick/260331-jx0-fix-beatprofiler-alignment-under-project/) |
+
 ### Blockers/Concerns
 
 - BeatProfiler case study content (pipeline diagrams, waveform assets) needs to be gathered before Phase 5
