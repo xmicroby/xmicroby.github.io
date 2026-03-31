@@ -82,7 +82,7 @@ Plans:
   5. All animations respect prefers-reduced-motion
 **Plans:** 2 plans
 Plans:
-- [ ] 04-01-PLAN.md — React integration setup + accessible TerminalHero typewriter component
+- [x] 04-01-PLAN.md — React integration setup + accessible TerminalHero typewriter component
 - [ ] 04-02-PLAN.md — ScrollReveal staggered entrance animations + visual verification
 **UI hint**: yes
 
