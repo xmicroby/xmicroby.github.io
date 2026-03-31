@@ -113,7 +113,7 @@ Plans:
   4. YNYC choir link (ynyc.org) and a biking/travel touch are discoverable through subtle interactions but don't interfere with core site functionality
 **Plans:** 2 plans
 Plans:
-- [ ] 06-01-PLAN.md — Accessibility audit, SEO/OG meta tags, and discoverable easter eggs
+- [x] 06-01-PLAN.md — Accessibility audit, SEO/OG meta tags, and discoverable easter eggs
 - [ ] 06-02-PLAN.md — Visual and interaction verification checkpoint
 
 ## Progress

@@ -65,15 +65,15 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Easter Eggs
 
-- [ ] **EASTER-01**: YNYC choir link (ynyc.org) discoverable through subtle interaction (not prominently displayed)
-- [ ] **EASTER-02**: Biking or travel visual touch discoverable somewhere on the site
-- [ ] **EASTER-03**: Easter eggs are non-intrusive — site functions fully without discovering them
+- [x] **EASTER-01**: YNYC choir link (ynyc.org) discoverable through subtle interaction (not prominently displayed)
+- [x] **EASTER-02**: Biking or travel visual touch discoverable somewhere on the site
+- [x] **EASTER-03**: Easter eggs are non-intrusive — site functions fully without discovering them
 
 ### Performance & Accessibility
 
-- [ ] **PERF-01**: Site meets WCAG AA contrast and typography standards
-- [ ] **PERF-02**: Animations respect `prefers-reduced-motion` media query (paused/reduced when set)
-- [ ] **PERF-03**: SEO meta tags and Open Graph tags configured for social sharing
+- [x] **PERF-01**: Site meets WCAG AA contrast and typography standards
+- [x] **PERF-02**: Animations respect `prefers-reduced-motion` media query (paused/reduced when set)
+- [x] **PERF-03**: SEO meta tags and Open Graph tags configured for social sharing
 - [x] **PERF-04**: Page loads under 2 seconds on a typical connection
 - [x] **PERF-05**: Site deploys correctly to GitHub Pages via GitHub Actions
 
@@ -144,12 +144,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DESIGN-02 | Phase 4 | Complete |
 | DESIGN-03 | Phase 1 | Complete |
 | DESIGN-04 | Phase 1 | Complete |
-| EASTER-01 | Phase 6 | Pending |
-| EASTER-02 | Phase 6 | Pending |
-| EASTER-03 | Phase 6 | Pending |
-| PERF-01 | Phase 6 | Pending |
-| PERF-02 | Phase 6 | Pending |
-| PERF-03 | Phase 6 | Pending |
+| EASTER-01 | Phase 6 | Complete |
+| EASTER-02 | Phase 6 | Complete |
+| EASTER-03 | Phase 6 | Complete |
+| PERF-01 | Phase 6 | Complete |
+| PERF-02 | Phase 6 | Complete |
+| PERF-03 | Phase 6 | Complete |
 | PERF-04 | Phase 1 | Complete |
 | PERF-05 | Phase 1 | Complete |
 
