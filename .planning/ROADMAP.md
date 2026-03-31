@@ -98,7 +98,7 @@ Plans:
   5. Links to beatprofiler.github.io and the IEEE paper are functional and clearly accessible
 **Plans:** 2 plans
 Plans:
-- [ ] 05-01-PLAN.md — React island components: interactive pipeline diagram + SVG cardiac waveform
+- [x] 05-01-PLAN.md — React island components: interactive pipeline diagram + SVG cardiac waveform
 - [ ] 05-02-PLAN.md — Case study page assembly with narrative, metrics, links + visual verification
 **UI hint**: yes
 

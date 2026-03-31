@@ -31,8 +31,8 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Projects
 
 - [ ] **PROJ-01**: BeatProfiler presented as a deep-dive case study (not just a card)
-- [ ] **PROJ-02**: Case study includes pipeline/workflow diagram showing how BeatProfiler works
-- [ ] **PROJ-03**: Cardiac waveform visualizations displayed in the case study (SVG-based for v1)
+- [x] **PROJ-02**: Case study includes pipeline/workflow diagram showing how BeatProfiler works
+- [x] **PROJ-03**: Cardiac waveform visualizations displayed in the case study (SVG-based for v1)
 - [ ] **PROJ-04**: Impact metrics displayed visually (521+ downloads, Harvard/MIT/Cornell/Columbia adoption, IEEE published)
 - [ ] **PROJ-05**: Links to beatprofiler.github.io and IEEE paper included
 
@@ -125,8 +125,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ABOUT-02 | Phase 3 | Complete |
 | ABOUT-03 | Phase 3 | Complete |
 | PROJ-01 | Phase 5 | Pending |
-| PROJ-02 | Phase 5 | Pending |
-| PROJ-03 | Phase 5 | Pending |
+| PROJ-02 | Phase 5 | Complete |
+| PROJ-03 | Phase 5 | Complete |
 | PROJ-04 | Phase 5 | Pending |
 | PROJ-05 | Phase 5 | Pending |
 | EXP-01 | Phase 3 | Complete |
