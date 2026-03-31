@@ -83,7 +83,7 @@ Plans:
 **Plans:** 2 plans
 Plans:
 - [x] 04-01-PLAN.md — React integration setup + accessible TerminalHero typewriter component
-- [ ] 04-02-PLAN.md — ScrollReveal staggered entrance animations + visual verification
+- [x] 04-02-PLAN.md — ScrollReveal staggered entrance animations + visual verification
 **UI hint**: yes
 
 ### Phase 5: BeatProfiler Case Study

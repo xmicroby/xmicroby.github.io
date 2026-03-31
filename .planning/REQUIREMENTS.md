@@ -12,13 +12,13 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **LAYOUT-01**: Site is fully responsive across mobile, tablet, and desktop viewports
 - [x] **LAYOUT-02**: User can navigate between sections via clear anchor links with smooth scrolling
 - [x] **LAYOUT-03**: Header/nav remains accessible (sticky or scroll-to-top) on all pages
-- [ ] **LAYOUT-04**: Sections have scroll-triggered entrance transitions
+- [x] **LAYOUT-04**: Sections have scroll-triggered entrance transitions
 
 ### Hero
 
 - [x] **HERO-01**: Hero displays name "Youngbin Kim" and title "LLM Engineer / Data Scientist (Clinical AI)"
 - [x] **HERO-02**: Terminal-style typing animation reveals professional identity on page load
-- [ ] **HERO-03**: Animated waveform background element in hero section
+- [x] **HERO-03**: Animated waveform background element in hero section
 - [x] **HERO-04**: Hero includes a call-to-action to scroll down or view work
 - [x] **HERO-05**: Terminal typing content is accessible to screen readers and search engines (CSS animation, not DOM injection)
 
@@ -59,7 +59,7 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Design System
 
 - [x] **DESIGN-01**: Clinical data aesthetic applied as unified design DNA (EHR-inspired typography, monospace accents, data visualization motifs)
-- [ ] **DESIGN-02**: Waveform motif used as section dividers throughout the site
+- [x] **DESIGN-02**: Waveform motif used as section dividers throughout the site
 - [x] **DESIGN-03**: Consistent color palette across both dark and light themes
 - [x] **DESIGN-04**: Typography hierarchy established (headings, body, code/terminal, accent text)
 
@@ -115,10 +115,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | LAYOUT-01 | Phase 1 | Complete |
 | LAYOUT-02 | Phase 1 | Complete |
 | LAYOUT-03 | Phase 1 | Complete |
-| LAYOUT-04 | Phase 4 | Pending |
+| LAYOUT-04 | Phase 4 | Complete |
 | HERO-01 | Phase 4 | Complete |
 | HERO-02 | Phase 4 | Complete |
-| HERO-03 | Phase 4 | Pending |
+| HERO-03 | Phase 4 | Complete |
 | HERO-04 | Phase 4 | Complete |
 | HERO-05 | Phase 4 | Complete |
 | ABOUT-01 | Phase 3 | Complete |
@@ -141,7 +141,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | THEME-04 | Phase 2 | Complete |
 | THEME-05 | Phase 2 | Complete |
 | DESIGN-01 | Phase 1 | Complete |
-| DESIGN-02 | Phase 4 | Pending |
+| DESIGN-02 | Phase 4 | Complete |
 | DESIGN-03 | Phase 1 | Complete |
 | DESIGN-04 | Phase 1 | Complete |
 | EASTER-01 | Phase 6 | Pending |
