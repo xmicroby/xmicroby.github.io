@@ -23,10 +23,8 @@ jobs:
 
       - name: Install, build, and upload
         uses: withastro/action@v3
-        # with:
-        #   path: . # Root of Astro project (default)
-        #   node-version: 22 # Node version (default: 22)
-        #   package-manager: npm@latest # (default: auto-detect)
+        with:
+          node-version: 22
 
   deploy:
     needs: build
