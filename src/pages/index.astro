@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Section from '../components/Section.astro';
 import Container from '../components/Container.astro';
 import Footer from '../components/Footer.astro';
+import TerminalHero from '../components/react/TerminalHero';
 ---
 
 <BaseLayout>
@@ -13,18 +14,7 @@ import Footer from '../components/Footer.astro';
     <!-- Hero Section: full viewport, centered content -->
     <section id="home" class="min-h-screen flex items-center justify-center">
       <Container>
-        <div class="text-center md:text-left">
-          <h1 class="text-[var(--color-text)]">Youngbin Kim</h1>
-          <p class="font-mono text-sm md:text-base text-[var(--color-text-muted)] mt-4 tracking-[0.04em]">
-            LLM Engineer / Data Scientist (Clinical AI)
-          </p>
-          <a
-            href="#projects"
-            class="inline-block mt-8 font-mono text-sm text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] transition-colors duration-200 border border-[var(--color-accent)] hover:border-[var(--color-accent-hover)] px-6 py-3 rounded"
-          >
-            View my work
-          </a>
-        </div>
+        <TerminalHero client:load />
       </Container>
     </section>
 
