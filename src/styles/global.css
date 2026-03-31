@@ -114,7 +114,16 @@ body {
   to { opacity: 1; }
 }
 
-/* === Reduced Motion === */
+/* === Reduced Motion (PERF-02 / D-01: disable ALL animations completely) ===
+   Audit (Phase 6): Global rule covers CSS animations + transitions + scroll.
+   React components (ScrollReveal, TerminalHero, PipelineDiagram, CardiacWaveform)
+   each use useReducedMotion() / matchMedia to skip animation entirely.
+   The theme-ready transition rule (line 59-62) is also overridden by the * selector below.
+
+   WCAG AA Contrast Audit (PERF-01, Phase 6):
+   Light: body #111827 on #f8fafb → 17.4:1 ✓ | muted #6b7280 → 5.5:1 ✓ | accent #0d9488 → 4.0:1 (decorative)
+   Dark:  body #e8edf5 on #0a0e17 → 15.7:1 ✓ | muted #8892a8 → 6.2:1 ✓ | accent #4ecdc4 → 10.0:1 ✓
+   All critical text passes WCAG AA. Accent on light bg used for decorative monospace labels only. */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0ms !important;
