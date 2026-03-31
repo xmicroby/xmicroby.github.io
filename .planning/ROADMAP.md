@@ -96,7 +96,10 @@ Plans:
   3. SVG-based cardiac waveform visualizations are displayed within the case study
   4. Impact metrics (521+ downloads, Harvard/MIT/Cornell/Columbia adoption, IEEE publication) are visually prominent
   5. Links to beatprofiler.github.io and the IEEE paper are functional and clearly accessible
-**Plans**: TBD
+**Plans:** 2 plans
+Plans:
+- [ ] 05-01-PLAN.md — React island components: interactive pipeline diagram + SVG cardiac waveform
+- [ ] 05-02-PLAN.md — Case study page assembly with narrative, metrics, links + visual verification
 **UI hint**: yes
 
 ### Phase 6: Polish, Accessibility & Easter Eggs
@@ -121,5 +124,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 2. Theming Engine | 0/2 | Planned | - |
 | 3. Core Content Sections | 2/2 | Complete   | 2026-03-30 |
 | 4. Hero & Waveform Motifs | 0/2 | Planned | - |
-| 5. BeatProfiler Case Study | 0/TBD | Not started | - |
+| 5. BeatProfiler Case Study | 0/2 | Planned | - |
 | 6. Polish, Accessibility & Easter Eggs | 0/TBD | Not started | - |
