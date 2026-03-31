@@ -5,6 +5,7 @@ import Section from '../components/Section.astro';
 import Container from '../components/Container.astro';
 import Footer from '../components/Footer.astro';
 import TerminalHero from '../components/react/TerminalHero';
+import ScrollReveal from '../components/react/ScrollReveal';
 ---
 
 <BaseLayout>
@@ -21,7 +22,7 @@ import TerminalHero from '../components/react/TerminalHero';
     <!-- Placeholder Sections -->
     <Section id="about" label="// about" title="About">
       <div class="grid md:grid-cols-2 gap-8 md:gap-12">
-        <div>
+        <ScrollReveal client:visible delay={0}>
           <p class="font-mono text-xs text-[var(--color-accent)] tracking-[0.08em] uppercase mb-4">Who I Am</p>
           <p class="text-base text-[var(--color-text)] leading-relaxed mb-4">
             I'm a Senior Data Scientist at NewYork-Presbyterian, where I was the first dedicated LLM hire. I build clinical NLP pipelines within HIPAA-compliant LLM infrastructure (local and cloud) and design agentic workflows that help clinicians make better decisions. I earned my PhD in Biomedical Engineering from Columbia University in 2024, focusing on machine learning approaches to cardiac signal analysis in disease models using stem cell derived engineered heart tissues.
@@ -29,8 +30,8 @@ import TerminalHero from '../components/react/TerminalHero';
           <p class="text-base text-[var(--color-text)] leading-relaxed">
             Before NYP and Columbia, I interned at Genentech building ML models and studied Bioengineering and EECS at UC Berkeley. I've published 9 peer-reviewed papers during my PhD and built BeatProfiler, an open-source ML platform for cardiac analysis adopted by external researchers. When I'm not wrangling data, you'll find me singing with the Young New Yorkers' Chorus, biking across the city, or planning my next trip.
           </p>
-        </div>
-        <div>
+        </ScrollReveal>
+        <ScrollReveal client:visible delay={0.15}>
           <p class="font-mono text-xs text-[var(--color-accent)] tracking-[0.08em] uppercase mb-4">What I Do</p>
           <ul class="space-y-4">
             <li class="p-4 rounded-lg bg-[var(--color-surface-elevated)] border border-[var(--color-border)]">
@@ -50,7 +51,7 @@ import TerminalHero from '../components/react/TerminalHero';
               <p class="text-sm text-[var(--color-text-muted)]">Python, deep learning, statistical modeling</p>
             </li>
           </ul>
-        </div>
+        </ScrollReveal>
       </div>
     </Section>
 
@@ -63,7 +64,7 @@ import TerminalHero from '../components/react/TerminalHero';
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-4">
 
           <!-- Stop 1: NYP -->
-          <div class="relative">
+          <ScrollReveal client:visible delay={0} className="relative">
             <!-- Timeline dot (desktop) -->
             <div class="hidden md:flex w-3 h-3 rounded-full bg-[var(--color-accent)] border-2 border-[var(--color-surface)] mb-4 relative z-10" aria-hidden="true"></div>
             <!-- Mobile timeline dot + line -->
@@ -75,10 +76,10 @@ import TerminalHero from '../components/react/TerminalHero';
               <p class="font-mono text-sm text-[var(--color-text-muted)] mt-0.5">New York-Presbyterian</p>
               <p class="text-sm text-[var(--color-text-muted)] mt-2 leading-relaxed">First dedicated LLM hire. Built clinical NLP pipelines, HIPAA-compliant LLM infrastructure, and agentic workflows.</p>
             </div>
-          </div>
+          </ScrollReveal>
 
           <!-- Stop 2: Columbia -->
-          <div class="relative">
+          <ScrollReveal client:visible delay={0.1} className="relative">
             <div class="hidden md:flex w-3 h-3 rounded-full bg-[var(--color-accent)] border-2 border-[var(--color-surface)] mb-4 relative z-10" aria-hidden="true"></div>
             <div class="md:hidden absolute left-0 top-0 bottom-0 w-[2px] bg-[var(--color-border)]" aria-hidden="true"></div>
             <div class="md:hidden absolute left-[-4px] top-1 w-[10px] h-[10px] rounded-full bg-[var(--color-accent)] border-2 border-[var(--color-surface)] z-10" aria-hidden="true"></div>
@@ -88,10 +89,10 @@ import TerminalHero from '../components/react/TerminalHero';
               <p class="font-mono text-sm text-[var(--color-text-muted)] mt-0.5">Columbia University</p>
               <p class="text-sm text-[var(--color-text-muted)] mt-2 leading-relaxed">ML for cardiac signal analysis. Created BeatProfiler. 9 peer-reviewed publications including IEEE.</p>
             </div>
-          </div>
+          </ScrollReveal>
 
           <!-- Stop 3: Genentech -->
-          <div class="relative">
+          <ScrollReveal client:visible delay={0.2} className="relative">
             <div class="hidden md:flex w-3 h-3 rounded-full bg-[var(--color-accent)] border-2 border-[var(--color-surface)] mb-4 relative z-10" aria-hidden="true"></div>
             <div class="md:hidden absolute left-0 top-0 bottom-0 w-[2px] bg-[var(--color-border)]" aria-hidden="true"></div>
             <div class="md:hidden absolute left-[-4px] top-1 w-[10px] h-[10px] rounded-full bg-[var(--color-accent)] border-2 border-[var(--color-surface)] z-10" aria-hidden="true"></div>
@@ -101,10 +102,10 @@ import TerminalHero from '../components/react/TerminalHero';
               <p class="font-mono text-sm text-[var(--color-text-muted)] mt-0.5">Genentech</p>
               <p class="text-sm text-[var(--color-text-muted)] mt-2 leading-relaxed">Built multimodal ML models for biomarker discovery from Alzheimer's drug clinical trial data.</p>
             </div>
-          </div>
+          </ScrollReveal>
 
           <!-- Stop 4: UC Berkeley -->
-          <div class="relative">
+          <ScrollReveal client:visible delay={0.3} className="relative">
             <div class="hidden md:flex w-3 h-3 rounded-full bg-[var(--color-accent)] border-2 border-[var(--color-surface)] mb-4 relative z-10" aria-hidden="true"></div>
             <div class="md:hidden absolute left-0 top-0 bottom-0 w-[2px] bg-[var(--color-border)]" aria-hidden="true"></div>
             <div class="md:hidden absolute left-[-4px] top-1 w-[10px] h-[10px] rounded-full bg-[var(--color-accent)] border-2 border-[var(--color-surface)] z-10" aria-hidden="true"></div>
@@ -114,14 +115,16 @@ import TerminalHero from '../components/react/TerminalHero';
               <p class="font-mono text-sm text-[var(--color-text-muted)] mt-0.5">UC Berkeley</p>
               <p class="text-sm text-[var(--color-text-muted)] mt-2 leading-relaxed">Foundation in engineering and computer science.</p>
             </div>
-          </div>
+          </ScrollReveal>
 
         </div>
       </div>
     </Section>
 
     <Section id="projects" label="// projects" title="Projects">
-      <p class="text-[var(--color-text-muted)]">This section is coming soon.</p>
+      <ScrollReveal client:visible>
+        <p class="text-[var(--color-text-muted)]">This section is coming soon.</p>
+      </ScrollReveal>
     </Section>
 
 
