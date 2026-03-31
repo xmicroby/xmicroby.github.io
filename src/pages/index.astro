@@ -6,6 +6,8 @@ import Container from '../components/Container.astro';
 import Footer from '../components/Footer.astro';
 import TerminalHero from '../components/react/TerminalHero';
 import ScrollReveal from '../components/react/ScrollReveal';
+import PipelineDiagram from '../components/react/PipelineDiagram';
+import CardiacWaveform from '../components/react/CardiacWaveform';
 ---
 
 <BaseLayout>
@@ -121,11 +123,99 @@ import ScrollReveal from '../components/react/ScrollReveal';
       </div>
     </Section>
 
-    <Section id="projects" label="// projects" title="Projects">
-      <ScrollReveal client:visible>
-        <p class="text-[var(--color-text-muted)]">This section is coming soon.</p>
-      </ScrollReveal>
-    </Section>
+    <!-- BeatProfiler Case Study -->
+    <section id="projects" class="py-12 md:py-16">
+      <!-- Section header inside standard container -->
+      <div class="mx-auto w-full px-4 md:px-8 lg:max-w-[960px] xl:max-w-[1120px]">
+        <span class="font-mono text-sm text-[var(--color-accent)] tracking-[0.04em] leading-[1.5]">
+          // projects
+        </span>
+        <h2 class="text-[var(--color-text)] mt-2 mb-8">
+          Projects
+        </h2>
+      </div>
+
+      <!-- Case study content in wider container (per D-01) -->
+      <div class="mx-auto w-full px-4 md:px-8 lg:max-w-[1120px] xl:max-w-[1280px]">
+        
+        <!-- Case Study Header -->
+        <ScrollReveal client:visible delay={0}>
+          <div class="mb-8">
+            <div class="flex flex-wrap items-center gap-3 mb-3">
+              <h3 class="text-xl md:text-2xl font-bold text-[var(--color-text)]">BeatProfiler</h3>
+              <span class="font-mono text-xs px-2 py-1 rounded bg-[var(--color-surface-elevated)] border border-[var(--color-border)] text-[var(--color-accent)]">Open Source</span>
+            </div>
+            <p class="text-base text-[var(--color-text-muted)] leading-relaxed max-w-3xl">
+              An end-to-end machine learning platform for automated cardiac signal analysis. BeatProfiler takes raw calcium transient and field potential recordings from stem cell-derived cardiomyocytes, processes them through automated pipelines, and classifies disease phenotypes — turning hours of manual analysis into seconds.
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <!-- Impact Metrics — minimal pills per D-03 -->
+        <ScrollReveal client:visible delay={0.1}>
+          <div class="flex flex-wrap gap-3 mb-10">
+            <span class="inline-flex items-center gap-1.5 font-mono text-xs px-3 py-1.5 rounded-full bg-[var(--color-surface-elevated)] border border-[var(--color-border)] text-[var(--color-text)]">
+              <span class="text-[var(--color-accent)]">↓</span> 521+ downloads
+            </span>
+            <span class="inline-flex items-center gap-1.5 font-mono text-xs px-3 py-1.5 rounded-full bg-[var(--color-surface-elevated)] border border-[var(--color-border)] text-[var(--color-text)]">
+              <span class="text-[var(--color-accent)]">🏛</span> Harvard · MIT · Cornell · Columbia
+            </span>
+            <span class="inline-flex items-center gap-1.5 font-mono text-xs px-3 py-1.5 rounded-full bg-[var(--color-surface-elevated)] border border-[var(--color-border)] text-[var(--color-text)]">
+              <span class="text-[var(--color-accent)]">📄</span> IEEE Published
+            </span>
+          </div>
+        </ScrollReveal>
+
+        <!-- Two-column layout: Pipeline + Waveform -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+          
+          <!-- Pipeline Diagram -->
+          <ScrollReveal client:visible delay={0.15}>
+            <div class="p-6 rounded-lg bg-[var(--color-surface-elevated)] border border-[var(--color-border)]">
+              <p class="font-mono text-xs text-[var(--color-accent)] tracking-[0.08em] uppercase mb-4">Processing Pipeline</p>
+              <PipelineDiagram client:visible />
+            </div>
+          </ScrollReveal>
+
+          <!-- Cardiac Waveform -->
+          <ScrollReveal client:visible delay={0.25}>
+            <div class="p-6 rounded-lg bg-[var(--color-surface-elevated)] border border-[var(--color-border)]">
+              <p class="font-mono text-xs text-[var(--color-accent)] tracking-[0.08em] uppercase mb-4">Calcium Transient Signal</p>
+              <CardiacWaveform client:visible />
+            </div>
+          </ScrollReveal>
+        </div>
+
+        <!-- External Links -->
+        <ScrollReveal client:visible delay={0.3}>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="https://beatprofiler.github.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 font-mono text-sm text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] transition-colors duration-200 border border-[var(--color-accent)] hover:border-[var(--color-accent-hover)] px-4 py-2 rounded"
+            >
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M6 3H3v10h10v-3M9 2h5v5M14 2L7 9" />
+              </svg>
+              beatprofiler.github.io
+            </a>
+            <a
+              href="https://ieeexplore.ieee.org/document/10288789"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 font-mono text-sm text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] transition-colors duration-200 border border-[var(--color-accent)] hover:border-[var(--color-accent-hover)] px-4 py-2 rounded"
+            >
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M4 2h8v12H4zM6 5h4M6 7.5h4M6 10h2" />
+              </svg>
+              IEEE Publication
+            </a>
+          </div>
+        </ScrollReveal>
+
+      </div>
+    </section>
 
 
   </main>
