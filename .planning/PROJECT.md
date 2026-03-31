@@ -22,9 +22,9 @@ Visitors immediately understand who Youngbin is professionally (clinical AI / LL
 
 ### Active
 
-- [ ] Terminal-style hero intro with typing animation revealing professional identity
+- [x] Terminal-style hero intro with typing animation revealing professional identity — Validated in Phase 4: Hero & Waveform Motifs
 
-- [ ] Waveform design motif throughout the site (section dividers, hover effects, background elements) — ties cardiac signals, NLP data, and music together
+- [x] Waveform design motif throughout the site (section dividers, hover effects, background elements) — ties cardiac signals, NLP data, and music together — Validated in Phase 4 (Staggered scroll reveals added, waveforms explicitly cancelled per D-06)
 - [ ] Projects section with BeatProfiler as a deep-dive case study (pipeline diagram, cardiac signal visuals, impact metrics)
 - [ ] Hobby easter eggs: YNYC choir link (ynyc.org), biking/travel touches — discoverable, not prominent
 - [ ] Responsive design refinement (content-level responsive testing across breakpoints)
@@ -40,7 +40,7 @@ Visitors immediately understand who Youngbin is professionally (clinical AI / LL
 
 ## Context
 
-- **Existing site:** Astro-powered site shell at youngbinkim.com (xmicroby.github.io). Phase 1 complete: design system, responsive layout. Phase 2 complete: dark/light theming engine. Phase 3 complete: About section and Experience timeline built, contact delegated to footer. Old index.html and assets still in repo root (cleanup deferred).
+- **Existing site:** Astro-powered site shell at youngbinkim.com (xmicroby.github.io). Phase 1 complete: design system, responsive layout. Phase 2 complete: dark/light theming engine. Phase 3 complete: About section and Experience timeline built, contact delegated to footer. Phase 4 complete: Terminal typing hero and staggered scroll-reveal animations. Old index.html and assets still in repo root (cleanup deferred).
 - **Professional background:** PhD in Biomedical Engineering from Columbia (2024). First dedicated LLM hire at NYP. Built HIPAA-compliant LLM infrastructure, clinical NLP pipelines, agentic workflows. 9 peer-reviewed publications. Prior: Genentech ML intern, UC Berkeley BioE/EECS.
 - **BeatProfiler:** Open-source ML platform for cardiac signal analysis (beatprofiler.github.io). 521 downloads, adopted at Harvard/MIT/Cornell/Columbia. IEEE published. Rich visual content available (cardiac waveforms, video analysis, pipeline diagrams).
 - **Personal interests:** Member of Young New Yorkers' Chorus (ynyc.org), biking, traveling, singing.
@@ -58,9 +58,9 @@ Visitors immediately understand who Youngbin is professionally (clinical AI / LL
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Title: "LLM Engineer / Data Scientist (Clinical AI)" | Covers LLM engineering, data science, and clinical AI domain in one line | ✓ Phase 3 |
+| Title: "LLM Engineer / Data Scientist (Clinical AI)" | Covers LLM engineering, data science, and clinical AI domain in one line | ✓ Phase 4 (Typed in Hero) |
 | Clinical data aesthetic as design DNA | Unique to Youngbin's background, avoids generic portfolio look | ✓ Phase 1 |
-| Waveform motif as unifying design thread | Connects cardiac signals (work), NLP data (work), and music (personal) naturally | — Pending |
+| Waveform motif as unifying design thread | Cancelled (D-06) — the metaphor felt forced. Replaced with staggered "data loading" scroll reveals. | ✓ Phase 4 |
 | BeatProfiler as sole case study | Only non-proprietary project with rich visuals and public site | — Pending |
 | Dark/light mode | Adds personality (lab at night vs clinical clean) and modern UX | ✓ Phase 2 |
 | Static site on GitHub Pages | Simple deployment, already configured, no backend needed | ✓ Phase 1 |
@@ -84,4 +84,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-30 after Phase 3 completion*
+*Last updated: 2026-03-31 after Phase 4 completion*
