@@ -99,7 +99,7 @@ Plans:
 **Plans:** 2 plans
 Plans:
 - [x] 05-01-PLAN.md — React island components: interactive pipeline diagram + SVG cardiac waveform
-- [ ] 05-02-PLAN.md — Case study page assembly with narrative, metrics, links + visual verification
+- [x] 05-02-PLAN.md — Case study page assembly with narrative, metrics, links + visual verification
 **UI hint**: yes
 
 ### Phase 6: Polish, Accessibility & Easter Eggs

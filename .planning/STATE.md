@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: Ready to execute
-stopped_at: Completed 05-01-PLAN.md
-last_updated: "2026-03-31T02:21:14.243Z"
+status: Phase complete — ready for verification
+stopped_at: Completed 05-02-PLAN.md
+last_updated: "2026-03-31T02:33:19.228Z"
 progress:
   total_phases: 6
-  completed_phases: 4
+  completed_phases: 5
   total_plans: 11
-  completed_plans: 10
+  completed_plans: 11
 ---
 
 # Project State
@@ -56,6 +56,7 @@ Plan: 2 of 2
 | Phase 04 P01 | 4min | 2 tasks | 5 files |
 | Phase 04 P02 | 1min | 2 tasks | 2 files |
 | Phase 05 P01 | 3min | 2 tasks | 2 files |
+| Phase 05 P02 | 2min | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -82,6 +83,7 @@ Recent decisions affecting current work:
 - [Phase 04]: ScrollReveal uses delay prop for stagger instead of staggerChildren — simpler Astro island integration
 - [Phase 05]: Used native <button> elements instead of role=button divs for interactive pipeline step cards (better keyboard/SR support)
 - [Phase 05]: Module-level synthetic cardiac data generation (300 points) for zero-runtime SVG waveform rendering
+- [Phase 05]: Stacked layout (grid-cols-1) instead of side-by-side for Pipeline + Waveform — pipeline needs ~900px for 5 horizontal steps
 
 ### Pending Todos
 
@@ -93,6 +95,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-31T02:21:14.240Z
-Stopped at: Completed 05-01-PLAN.md
+Last session: 2026-03-31T02:33:19.225Z
+Stopped at: Completed 05-02-PLAN.md
 Resume file: None
