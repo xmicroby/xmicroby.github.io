@@ -18,6 +18,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 4: Hero & Waveform Motifs** - Terminal typing animation, waveform backgrounds, section dividers, and scroll transitions
 - [ ] **Phase 5: BeatProfiler Case Study** - Deep-dive project section with pipeline diagrams, cardiac visualizations, and impact metrics
 - [ ] **Phase 6: Polish, Accessibility & Easter Eggs** - WCAG compliance, motion preferences, SEO, and discoverable hobby touches
+- [ ] **Phase 7: Agentic LLM Project** - Second project case study showcasing an agentic LLM-based system, with publicly shareable content selected from proprietary NYP work
 
 ## Phase Details
 
@@ -119,7 +120,7 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
+Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -129,3 +130,20 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 4. Hero & Waveform Motifs | 0/2 | Planned | - |
 | 5. BeatProfiler Case Study | 0/2 | Planned | - |
 | 6. Polish, Accessibility & Easter Eggs | 0/TBD | Not started | - |
+| 7. Agentic LLM Project | 0/2 | Planned | - |
+
+### Phase 7: Agentic LLM Project
+
+**Goal:** Add ChartExtract as a second interactive project case study in the portfolio — an architecture showcase with a pipeline builder workflow DAG (three auto-cycling loops) and a conditional sample pipeline panel, all within the existing Projects section below BeatProfiler
+**Depends on:** Phase 6
+**Requirements**: CONTENT-01
+**Success Criteria** (what must be TRUE):
+  1. ChartExtract case study appears below BeatProfiler in the Projects section with a visual separator
+  2. Interactive builder workflow DAG shows three labeled loops (Design, Workbench, Optimize) that auto-cycle on load
+  3. Users can click a loop to isolate/highlight it, and click step nodes to expand descriptions
+  4. Sample pipeline panel shows a conditional cancer staging DAG (Cancer Type → Biomarker Extraction for breast cancer)
+  5. No institutional attribution, no real registry names, no external links (clean architecture showcase)
+**Plans:** 2 plans
+Plans:
+- [ ] 07-01-PLAN.md — BuilderWorkflow + PipelinePanel React island components
+- [ ] 07-02-PLAN.md — ChartExtract case study page assembly + visual verification
