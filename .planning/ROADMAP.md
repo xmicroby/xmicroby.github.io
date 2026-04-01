@@ -145,5 +145,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
   5. No institutional attribution, no real registry names, no external links (clean architecture showcase)
 **Plans:** 2 plans
 Plans:
-- [ ] 07-01-PLAN.md — BuilderWorkflow + PipelinePanel React island components
+- [x] 07-01-PLAN.md — BuilderWorkflow + PipelinePanel React island components
 - [ ] 07-02-PLAN.md — ChartExtract case study page assembly + visual verification
