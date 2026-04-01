@@ -22,3 +22,18 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+# Temporary artifacts
+.playwright-mcp/
+*.json
+*.md
+!*.md  # Wait, this might unignore too much.
+# Let's list specifically.
+beatprofiler-arrow-metrics-fixed.json
+beatprofiler-arrow-metrics.json
+playwright-workflow-metrics.json
+beatprofiler-pipeline-snapshot.md
+phase7-final-layout.md
+phase7-mobile.md
+phase7-page.md
+phase7-updated.md
+workflow-snapshot.md
