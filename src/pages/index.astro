@@ -8,6 +8,8 @@ import TerminalHero from '../components/react/TerminalHero';
 import ScrollReveal from '../components/react/ScrollReveal';
 import PipelineDiagram from '../components/react/PipelineDiagram';
 import CardiacWaveform from '../components/react/CardiacWaveform';
+import BuilderWorkflow from '../components/react/BuilderWorkflow';
+import PipelinePanel from '../components/react/PipelinePanel';
 ---
 
 <BaseLayout>
@@ -208,6 +210,34 @@ import CardiacWaveform from '../components/react/CardiacWaveform';
               </svg>
               IEEE Publication
             </a>
+          </div>
+        </ScrollReveal>
+
+        <hr class="my-16 border-t border-[var(--color-border)]" />
+
+        <ScrollReveal client:visible delay={0}>
+          <div class="mb-8">
+            <div class="mb-3 flex flex-wrap items-center gap-3">
+              <h3 class="text-xl md:text-2xl font-bold text-[var(--color-text)]">ChartExtract</h3>
+              <span class="rounded border border-[var(--color-border)] bg-[var(--color-surface-elevated)] px-2 py-1 font-mono text-xs text-[var(--color-text-muted)]">In Development</span>
+            </div>
+            <p class="max-w-3xl text-base leading-relaxed text-[var(--color-text-muted)]">
+              Extracting structured data from clinical documents like discharge summaries, operative notes, and pathology reports is one of the most labor-intensive tasks in healthcare. ChartExtract is an agentic platform that lets clinical staff design, test, and optimize multi-step extraction pipelines through a visual interface and conversational AI instead of hand-building brittle review workflows.
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal client:visible delay={0.1}>
+          <div class="mb-8 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-elevated)] p-6">
+            <p class="mb-4 font-mono text-xs uppercase tracking-[0.08em] text-[var(--color-accent)]">Pipeline Builder Workflow</p>
+            <BuilderWorkflow client:visible />
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal client:visible delay={0.2}>
+          <div class="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-elevated)] p-6">
+            <p class="mb-4 font-mono text-xs uppercase tracking-[0.08em] text-[var(--color-accent)]">Sample Generated Pipeline</p>
+            <PipelinePanel client:visible />
           </div>
         </ScrollReveal>
 
