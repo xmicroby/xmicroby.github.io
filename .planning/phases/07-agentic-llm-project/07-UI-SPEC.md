@@ -25,6 +25,12 @@ created: 2026-04-01
 
 ---
 
+## Visuals
+
+**Primary Focal Point:** The interactive **Pipeline Builder Workflow** diagram acts as the main visual anchor for the ChartExtract case study.
+
+---
+
 ## Spacing Scale
 
 Declared values (must be multiples of 4):
@@ -60,10 +66,10 @@ Exceptions: none
 |------|-------|-------|
 | Dominant (60%) | var(--color-bg) | Background, main surfaces |
 | Secondary (30%) | var(--color-surface-elevated) | Cards, pipeline diagram background |
-| Accent (10%) | var(--color-accent) | Links, active workflow loops, CTA buttons |
+| Accent (10%) | var(--color-accent) | Active workflow loop highlight, Primary CTA |
 | Destructive | var(--color-destructive) | Destructive actions only (not used in this phase) |
 
-Accent reserved for: text links, active states in pipeline workflow loops, and primary interaction elements.
+Accent reserved strictly for: active states in pipeline workflow loops, and Primary CTA. Regular text links will use base text color with underline/hover effects.
 
 ---
 
