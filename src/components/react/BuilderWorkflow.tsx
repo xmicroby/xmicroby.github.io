@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion, useReducedMotion, AnimatePresence } from 'motion/react';
+import PipelinePanel from './PipelinePanel';
 
 interface WorkflowStep {
   id: string;
@@ -107,9 +108,9 @@ const STEPS: WorkflowStep[] = [
   },
   {
     id: 'deploy',
-    name: 'Improved Pipeline',
+    name: 'Final Pipeline',
     description:
-      'The optimized pipeline version is saved with full audit trail. Accuracy improves incrementally with each correction cycle.',
+      'A validated extraction pipeline is ready to run, whether it ships directly from workbench review or after optimization.',
     loop: null,
     icon: (
       <svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -124,24 +125,6 @@ const STEPS: WorkflowStep[] = [
 const LOOP_ORDER: Array<'design' | 'workbench' | 'optimize'> = ['design', 'workbench', 'optimize'];
 const CYCLE_INTERVAL = 3000;
 
-function DownArrow() {
-  return (
-    <svg
-      viewBox="0 0 12 24"
-      className="w-3 h-6 shrink-0 mx-auto"
-      fill="none"
-      stroke="var(--color-accent)"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <line x1="6" y1="0" x2="6" y2="20" />
-      <polyline points="2,16 6,20 10,16" />
-    </svg>
-  );
-}
-
 function CycleArrow() {
   return (
     <svg
@@ -154,20 +137,18 @@ function CycleArrow() {
       strokeLinejoin="round"
       aria-hidden="true"
     >
-      <path d="M4,10 Q16,-4 28,10" />
-      <polyline points="24,7 28,10 24,13" />
+      <path d="M4,10 Q16,24 28,10" />
+      <polyline points="21,11 28,10 24,17" />
     </svg>
   );
 }
 
 function StepNode({
   step,
-  index,
   isExpanded,
   onToggle,
 }: {
   step: WorkflowStep;
-  index: number;
   isExpanded: boolean;
   onToggle: () => void;
 }) {
@@ -185,13 +166,7 @@ function StepNode({
         borderColor: isExpanded ? 'var(--color-accent)' : 'var(--color-border)',
       }}
     >
-      <div className="flex items-center gap-2 mb-1">
-        <span
-          className="font-mono text-xs font-bold"
-          style={{ color: 'var(--color-accent)' }}
-        >
-          {String(index + 1).padStart(2, '0')}
-        </span>
+      <div className="mb-2 flex items-center justify-center">
         <span style={{ color: isExpanded ? 'var(--color-accent)' : 'var(--color-text-muted)' }}>
           {step.icon}
         </span>
@@ -220,10 +195,8 @@ function StepNode({
 
 function StaticStepNode({
   step,
-  index,
 }: {
   step: WorkflowStep;
-  index: number;
 }) {
   return (
     <div
@@ -233,13 +206,7 @@ function StaticStepNode({
         borderColor: 'var(--color-border)',
       }}
     >
-      <div className="flex items-center gap-2 mb-1">
-        <span
-          className="font-mono text-xs font-bold"
-          style={{ color: 'var(--color-accent)' }}
-        >
-          {String(index + 1).padStart(2, '0')}
-        </span>
+      <div className="mb-2 flex items-center justify-center">
         <span style={{ color: 'var(--color-accent)' }}>{step.icon}</span>
       </div>
       <p className="font-mono text-xs text-center leading-snug" style={{ color: 'var(--color-text)' }}>
@@ -252,15 +219,173 @@ function StaticStepNode({
   );
 }
 
+function VerticalArrow({ direction = 'down' }: { direction?: 'down' | 'up' }) {
+  return (
+    <svg
+      viewBox="0 0 12 24"
+      className="h-6 w-3 shrink-0"
+      fill="none"
+      stroke="var(--color-accent)"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <line x1="6" y1={direction === 'down' ? '2' : '6'} x2="6" y2="20" />
+      {direction === 'down' ? <polyline points="2,16 6,20 10,16" /> : <polyline points="2,8 6,4 10,8" />}
+    </svg>
+  );
+}
+
+function HorizontalArrow({ dashed = false }: { dashed?: boolean }) {
+  return (
+    <svg
+      viewBox="0 0 48 16"
+      className="h-4 w-12 shrink-0"
+      fill="none"
+      stroke="var(--color-accent)"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <line x1="0" y1="8" x2="40" y2="8" strokeDasharray={dashed ? '5 3' : undefined} />
+      <polyline points="36,4 40,8 36,12" />
+    </svg>
+  );
+}
+
+function DiagonalArrow() {
+  return (
+    <svg
+      viewBox="0 0 84 56"
+      className="h-14 w-24 shrink-0"
+      fill="none"
+      stroke="var(--color-accent)"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M4 8C26 8 43 14 59 30L76 47" strokeDasharray="5 3" />
+      <polyline points="68,46 76,47 75,39" />
+    </svg>
+  );
+}
+
+function LoopCard({
+  loop,
+  activeLoop,
+  expandedStep,
+  onStepToggle,
+  prefersReducedMotion,
+}: {
+  loop: Loop;
+  activeLoop: 'design' | 'workbench' | 'optimize' | null;
+  expandedStep: string | null;
+  onStepToggle?: (stepId: string) => void;
+  prefersReducedMotion: boolean;
+}) {
+  const steps = STEPS.filter((step) => loop.steps.includes(step.id));
+  const isActive = prefersReducedMotion || activeLoop === loop.id;
+
+  const body = (
+    <>
+      <span
+        className="mb-3 block font-mono text-xs transition-all duration-200"
+        style={{
+          color: 'var(--color-accent)',
+          fontWeight: isActive ? 700 : 400,
+        }}
+      >
+        {loop.label}
+      </span>
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 items-start">
+        {steps.map((step) => {
+          if (prefersReducedMotion || !onStepToggle) {
+            return <StaticStepNode key={step.id} step={step} />;
+          }
+
+          return (
+            <StepNode
+              key={step.id}
+              step={step}
+              isExpanded={expandedStep === step.id}
+              onToggle={() => onStepToggle(step.id)}
+            />
+          );
+        })}
+      </div>
+      <div className="mt-2 flex justify-center">
+        <CycleArrow />
+      </div>
+    </>
+  );
+
+  if (prefersReducedMotion) {
+    return (
+      <section
+        aria-label={loop.label}
+        className="rounded-lg border border-dashed p-4"
+        style={{ borderColor: 'var(--color-accent)' }}
+      >
+        {body}
+      </section>
+    );
+  }
+
+  return (
+    <motion.section
+      aria-label={loop.label}
+      className="rounded-lg border border-dashed p-4 transition-colors duration-300"
+      style={{
+        borderColor: isActive ? 'var(--color-accent)' : 'var(--color-border)',
+      }}
+      variants={{
+        hidden: { opacity: 0, y: 16 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
+      }}
+      animate={
+        isActive
+          ? { opacity: [0.85, 1, 0.85], transition: { duration: 2, repeat: Infinity, ease: 'easeInOut' } }
+          : { opacity: 1 }
+      }
+    >
+      {body}
+    </motion.section>
+  );
+}
+
+function FinalPipelineCard() {
+  return (
+    <div
+      className="rounded-lg border p-4 md:p-5"
+      style={{
+        backgroundColor: 'var(--color-surface-elevated)',
+        borderColor: 'var(--color-accent)',
+      }}
+    >
+      <div className="mb-4 space-y-2 text-center md:text-left">
+        <p className="font-mono text-xs uppercase tracking-[0.08em]" style={{ color: 'var(--color-accent)' }}>
+          Final Pipeline
+        </p>
+        <p className="font-mono text-xs" style={{ color: 'var(--color-text-muted)' }}>
+          Example generated DAG
+        </p>
+      </div>
+      <PipelinePanel />
+    </div>
+  );
+}
+
 export default function BuilderWorkflow() {
   const prefersReducedMotion = useReducedMotion();
   const [activeLoop, setActiveLoop] = useState<'design' | 'workbench' | 'optimize' | null>('design');
-  const [userSelected, setUserSelected] = useState(false);
   const [expandedStep, setExpandedStep] = useState<string | null>(null);
 
   // Auto-cycle through loops
   useEffect(() => {
-    if (prefersReducedMotion || userSelected) return;
+    if (prefersReducedMotion) return;
     const interval = setInterval(() => {
       setActiveLoop((prev) => {
         const idx = prev ? LOOP_ORDER.indexOf(prev) : -1;
@@ -268,34 +393,11 @@ export default function BuilderWorkflow() {
       });
     }, CYCLE_INTERVAL);
     return () => clearInterval(interval);
-  }, [userSelected, prefersReducedMotion]);
-
-  const handleLoopClick = useCallback((loopId: 'design' | 'workbench' | 'optimize') => {
-    if (activeLoop === loopId && userSelected) {
-      // Clicking the same loop again restarts auto-cycle
-      setUserSelected(false);
-    } else {
-      setActiveLoop(loopId);
-      setUserSelected(true);
-    }
-  }, [activeLoop, userSelected]);
-
-  const handleContainerClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    const target = e.target;
-    if (target instanceof Element && target.closest('[data-loop-root="true"]')) {
-      return;
-    }
-
-    if (userSelected) {
-      setUserSelected(false);
-    }
-  }, [userSelected]);
+  }, [prefersReducedMotion]);
 
   const toggleStep = useCallback((stepId: string) => {
     setExpandedStep((prev) => (prev === stepId ? null : stepId));
   }, []);
-
-  const getStepGlobalIndex = (stepId: string) => STEPS.findIndex((s) => s.id === stepId);
 
   // Reduced motion: show all loops highlighted statically, all descriptions visible
   if (prefersReducedMotion) {
@@ -304,44 +406,56 @@ export default function BuilderWorkflow() {
         aria-label="ChartExtract pipeline builder workflow showing three iterative development loops"
         className="flex flex-col gap-4 w-full"
       >
-        {LOOPS.map((loop) => (
-          <section
-            key={loop.id}
-            aria-label={loop.label}
-            className="border border-dashed rounded-lg p-4"
-            style={{ borderColor: 'var(--color-accent)' }}
-          >
-            <span
-              className="font-mono text-xs font-bold mb-3 block"
-              style={{ color: 'var(--color-accent)' }}
-            >
-              {loop.label}
-            </span>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 items-start">
-              {loop.steps.map((stepId) => {
-                const step = STEPS.find((s) => s.id === stepId)!;
-                const globalIdx = getStepGlobalIndex(stepId);
-                return (
-                  <StaticStepNode key={stepId} step={step} index={globalIdx} />
-                );
-              })}
+        <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_minmax(300px,0.95fr)] md:grid-rows-[auto_auto_1fr] md:items-start">
+          <div className="space-y-4 md:col-start-1 md:row-start-1">
+            <LoopCard loop={LOOPS[0]} activeLoop="design" expandedStep={null} prefersReducedMotion />
+            <div className="grid gap-3 px-2 sm:grid-cols-2">
+              <div className="flex items-center justify-center gap-2">
+                <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--color-accent)]">Test edge</span>
+                <VerticalArrow />
+              </div>
+              <div className="flex items-center justify-center gap-2">
+                <VerticalArrow direction="up" />
+                <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--color-accent)]">Revision edge</span>
+              </div>
             </div>
-            <div className="flex justify-center mt-2">
-              <CycleArrow />
+          </div>
+          <div className="space-y-4 md:col-start-1 md:row-start-2">
+            <div className="grid gap-3 md:grid-cols-[minmax(0,1fr)_auto] md:items-start">
+              <LoopCard loop={LOOPS[1]} activeLoop="workbench" expandedStep={null} prefersReducedMotion />
+              <div className="hidden md:flex flex-col items-center justify-center gap-2 pt-10">
+                <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--color-accent)]">Skip optimization</span>
+                <HorizontalArrow dashed />
+              </div>
             </div>
-          </section>
-        ))}
-        <DownArrow />
-        {/* Deploy node */}
-        {(() => {
-          const deployStep = STEPS.find((s) => s.id === 'deploy')!;
-          const deployIdx = getStepGlobalIndex('deploy');
-          return (
-            <div className="max-w-[200px] mx-auto w-full">
-              <StaticStepNode step={deployStep} index={deployIdx} />
+            <div className="flex items-center justify-center gap-2">
+              <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--color-accent)]">Optimize path</span>
+              <VerticalArrow />
             </div>
-          );
-        })()}
+          </div>
+          <div className="md:col-start-2 md:row-span-3 md:row-start-1">
+            <FinalPipelineCard />
+          </div>
+          <div className="space-y-4 md:col-start-1 md:row-start-3">
+            <div className="grid gap-3 md:grid-cols-[minmax(0,1fr)_auto] md:items-start">
+              <LoopCard loop={LOOPS[2]} activeLoop="optimize" expandedStep={null} prefersReducedMotion />
+              <div className="hidden md:flex flex-col items-center justify-center gap-2 pt-10">
+                <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--color-accent)]">Improved pipeline</span>
+                <HorizontalArrow />
+              </div>
+            </div>
+          </div>
+          <div className="space-y-3 md:hidden">
+            <div className="flex items-center justify-center gap-2">
+              <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--color-accent)]">Skip optimization</span>
+              <DiagonalArrow />
+            </div>
+            <div className="flex items-center justify-center gap-2">
+              <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--color-accent)]">Improved pipeline</span>
+              <HorizontalArrow />
+            </div>
+          </div>
+        </div>
       </figure>
     );
   }
@@ -357,83 +471,113 @@ export default function BuilderWorkflow() {
         hidden: {},
         visible: { transition: { staggerChildren: 0.2 } },
       }}
-      onClick={handleContainerClick}
     >
-      {LOOPS.map((loop) => {
-        const isActive = activeLoop === loop.id;
-        return (
+      <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_minmax(300px,0.95fr)] md:grid-rows-[auto_auto_1fr] md:items-start">
+        <div className="space-y-4 md:col-start-1 md:row-start-1">
+          <LoopCard
+            loop={LOOPS[0]}
+            activeLoop={activeLoop}
+            expandedStep={expandedStep}
+            onStepToggle={toggleStep}
+            prefersReducedMotion={false}
+          />
           <motion.div
-            key={loop.id}
-            data-loop-root="true"
-            aria-label={loop.label}
-            className="border border-dashed rounded-lg p-4 cursor-pointer transition-colors duration-300"
-            style={{
-              borderColor: isActive ? 'var(--color-accent)' : 'var(--color-border)',
-            }}
             variants={{
               hidden: { opacity: 0, y: 16 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
             }}
-            animate={
-              isActive
-                ? { opacity: [0.85, 1, 0.85], transition: { duration: 2, repeat: Infinity, ease: 'easeInOut' } }
-                : { opacity: 1 }
-            }
-            onClick={() => handleLoopClick(loop.id)}
           >
-            <span
-              className="font-mono text-xs mb-3 block transition-all duration-200"
-              style={{
-                color: 'var(--color-accent)',
-                fontWeight: isActive ? 700 : 400,
-              }}
-            >
-              {loop.label}
-            </span>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 items-start">
-              {loop.steps.map((stepId) => {
-                const step = STEPS.find((s) => s.id === stepId)!;
-                const globalIdx = getStepGlobalIndex(stepId);
-                return (
-                  <StepNode
-                    key={stepId}
-                    step={step}
-                    index={globalIdx}
-                    isExpanded={expandedStep === stepId}
-                    onToggle={() => toggleStep(stepId)}
-                  />
-                );
-              })}
-            </div>
-            <div className="flex justify-center mt-2">
-              <CycleArrow />
+            <div className="grid gap-3 px-2 sm:grid-cols-2">
+              <div className="flex items-center justify-center gap-2">
+                <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--color-accent)]">Test edge</span>
+                <VerticalArrow />
+              </div>
+              <div className="flex items-center justify-center gap-2">
+                <VerticalArrow direction="up" />
+                <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--color-accent)]">Revision edge</span>
+              </div>
             </div>
           </motion.div>
-        );
-      })}
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, y: 16 },
-          visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
-        }}
-      >
-        <DownArrow />
-      </motion.div>
-      {/* Deploy node — outside any loop */}
-      <motion.div
-        className="max-w-[200px] mx-auto w-full"
-        variants={{
-          hidden: { opacity: 0, y: 16 },
-          visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
-        }}
-      >
-        <StepNode
-          step={STEPS.find((s) => s.id === 'deploy')!}
-          index={getStepGlobalIndex('deploy')}
-          isExpanded={expandedStep === 'deploy'}
-          onToggle={() => toggleStep('deploy')}
-        />
-      </motion.div>
+        </div>
+        <motion.div
+          className="md:col-start-2 md:row-span-3 md:row-start-1"
+          variants={{
+            hidden: { opacity: 0, x: 16 },
+            visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: 'easeOut' } },
+          }}
+        >
+          <FinalPipelineCard />
+        </motion.div>
+        <div className="space-y-4 md:col-start-1 md:row-start-2">
+          <motion.div
+            className="grid gap-3 md:grid-cols-[minmax(0,1fr)_auto] md:items-start"
+            variants={{
+              hidden: { opacity: 0, y: 16 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
+            }}
+          >
+            <LoopCard
+              loop={LOOPS[1]}
+              activeLoop={activeLoop}
+              expandedStep={expandedStep}
+              onStepToggle={toggleStep}
+              prefersReducedMotion={false}
+            />
+            <div className="hidden md:flex flex-col items-center justify-center gap-2 pt-10">
+              <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--color-accent)]">Skip optimization</span>
+              <HorizontalArrow dashed />
+            </div>
+          </motion.div>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 16 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
+            }}
+          >
+            <div className="flex items-center justify-center gap-2">
+              <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--color-accent)]">Optimize path</span>
+              <VerticalArrow />
+            </div>
+          </motion.div>
+        </div>
+        <div className="space-y-4 md:col-start-1 md:row-start-3">
+          <motion.div
+            className="grid gap-3 md:grid-cols-[minmax(0,1fr)_auto] md:items-start"
+            variants={{
+              hidden: { opacity: 0, y: 16 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
+            }}
+          >
+            <LoopCard
+              loop={LOOPS[2]}
+              activeLoop={activeLoop}
+              expandedStep={expandedStep}
+              onStepToggle={toggleStep}
+              prefersReducedMotion={false}
+            />
+            <div className="hidden md:flex flex-col items-center justify-center gap-2 pt-10">
+              <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--color-accent)]">Improved pipeline</span>
+              <HorizontalArrow />
+            </div>
+          </motion.div>
+          <motion.div
+            className="space-y-3 md:hidden"
+            variants={{
+              hidden: { opacity: 0, y: 16 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
+            }}
+          >
+            <div className="flex items-center justify-center gap-2">
+              <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--color-accent)]">Skip optimization</span>
+              <DiagonalArrow />
+            </div>
+            <div className="flex items-center justify-center gap-2">
+              <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--color-accent)]">Improved pipeline</span>
+              <HorizontalArrow />
+            </div>
+          </motion.div>
+        </div>
+      </div>
     </motion.figure>
   );
 }

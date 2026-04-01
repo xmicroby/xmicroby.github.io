@@ -131,9 +131,9 @@ export default function PipelineDiagram() {
   // Reduced motion: show all steps expanded, no animations
   if (prefersReducedMotion) {
     return (
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-3 md:gap-2 w-full md:justify-center flex-wrap">
+      <div className="flex flex-col md:flex-row items-center md:items-center gap-3 md:gap-2 w-full md:justify-center flex-wrap">
         {steps.map((step, i) => (
-          <div key={step.id} className="flex flex-col md:flex-row items-center gap-3 md:gap-2">
+          <div key={step.id} className="flex flex-col md:flex-row items-center md:items-center gap-3 md:gap-2">
             <div
               className="flex flex-col items-center p-4 rounded-lg border max-w-[160px] w-full"
               style={{
@@ -170,8 +170,8 @@ export default function PipelineDiagram() {
   }
 
   return (
-    <motion.div
-      className="flex flex-col md:flex-row items-center md:items-start gap-3 md:gap-2 w-full md:justify-center flex-wrap"
+      <motion.div
+      className="flex flex-col md:flex-row items-center md:items-center gap-3 md:gap-2 w-full md:justify-center flex-wrap"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: '-40px' }}
@@ -181,9 +181,9 @@ export default function PipelineDiagram() {
       }}
     >
       {steps.map((step, i) => (
-        <motion.div
-          key={step.id}
-          className="flex flex-col md:flex-row items-center gap-3 md:gap-2"
+          <motion.div
+            key={step.id}
+            className="flex flex-col md:flex-row items-center md:items-center gap-3 md:gap-2"
           variants={{
             hidden: { opacity: 0, y: 16 },
             visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } },
