@@ -119,3 +119,4 @@ Resume file: None
 | fast | Add profile photo to about section | 2026-04-07 | 0121fea | |
 | fast | Move profile photo to hero section | 2026-04-07 | 02a4ad0 | |
 | fast | Prevent image shift during typewriter effect | 2026-04-07 | 27aa798 | |
+| fast | Create custom YK initials favicon | 2026-04-07 | ef37774 | |
