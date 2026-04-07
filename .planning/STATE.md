@@ -6,7 +6,7 @@ status: Ready to execute
 stopped_at: Phase 07 Complete
 last_updated: "2026-04-01T19:48:07.254Z"
 progress:
-  total_phases: 7
+  total_phases: 8
   completed_phases: 6
   total_plans: 15
   completed_plans: 14
@@ -66,6 +66,7 @@ Plan: 2 of 2
 ### Roadmap Evolution
 
 - Phase 7 added: Agentic LLM Project — second case study showcasing an agentic LLM-based system
+- Phase 8 added: Upgrade dependencies to fix vulnerabilities
 
 ### Decisions
 
@@ -114,3 +115,7 @@ None yet.
 Last session: 2026-04-01T19:48:07.252Z
 Stopped at: Phase 07 Complete
 Resume file: None
+| fast | Upgrade dependencies to fix vulnerabilities | 2026-04-07 | aded1bc | |
+| fast | Add profile photo to about section | 2026-04-07 | 0121fea | |
+| fast | Move profile photo to hero section | 2026-04-07 | 02a4ad0 | |
+| fast | Prevent image shift during typewriter effect | 2026-04-07 | 27aa798 | |

@@ -147,3 +147,13 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 Plans:
 - [x] 07-01-PLAN.md — BuilderWorkflow + PipelinePanel React island components
 - [ ] 07-02-PLAN.md — ChartExtract case study page assembly + visual verification
+
+### Phase 8: upgrade dependencies to fix vulnerabilities
+
+**Goal:** [To be planned]
+**Requirements**: TBD
+**Depends on:** Phase 7
+**Plans:** 0 plans
+
+Plans:
+- [ ] TBD (run /gsd:plan-phase 8 to break down)
