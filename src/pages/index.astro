@@ -18,7 +18,12 @@ import BuilderWorkflow from '../components/react/BuilderWorkflow';
     <!-- Hero Section: full viewport, centered content -->
     <section id="home" class="min-h-screen flex items-center justify-center">
       <Container>
-        <TerminalHero client:load />
+        <div class="flex flex-col-reverse md:flex-row items-center justify-center gap-8 md:gap-16 w-full">
+          <TerminalHero client:load />
+          <ScrollReveal client:load delay={0.5}>
+            <img src="/profile.jpg" alt="Youngbin Kim" class="w-40 h-40 md:w-56 md:h-56 rounded-full border border-[var(--color-border)] object-cover shadow-xl grayscale hover:grayscale-0 transition-all duration-500 ease-in-out" />
+          </ScrollReveal>
+        </div>
       </Container>
     </section>
 
@@ -26,18 +31,13 @@ import BuilderWorkflow from '../components/react/BuilderWorkflow';
     <Section id="about" label="// about" title="About">
       <div class="grid md:grid-cols-2 gap-8 md:gap-12">
         <ScrollReveal client:visible delay={0}>
-          <div class="mb-6 flex flex-col md:flex-row gap-6 items-start">
-            <img src="/profile.jpg" alt="Youngbin Kim" class="w-24 h-24 md:w-32 md:h-32 rounded-full border-2 border-[var(--color-border)] object-cover shrink-0 shadow-lg" />
-            <div>
-              <p class="font-mono text-xs text-[var(--color-accent)] tracking-[0.08em] uppercase mb-4">Who I Am</p>
-              <p class="text-base text-[var(--color-text)] leading-relaxed mb-4">
-                I'm a Senior Data Scientist at NewYork-Presbyterian, where I was the first dedicated LLM hire. I build clinical NLP pipelines within HIPAA-compliant LLM infrastructure (local and cloud) and design agentic workflows that help clinicians make better decisions. I earned my PhD in Biomedical Engineering from Columbia University in 2024, focusing on machine learning approaches to cardiac signal analysis in disease models using stem cell derived engineered heart tissues.
-              </p>
-              <p class="text-base text-[var(--color-text)] leading-relaxed">
-                Before NYP and Columbia, I interned at Genentech building ML models and studied Bioengineering and EECS at UC Berkeley. I've published 9 peer-reviewed papers during my PhD and built BeatProfiler, an open-source ML platform for cardiac analysis adopted by external researchers. When I'm not wrangling data, you'll find me singing with the <a href="https://ynyc.org" target="_blank" rel="noopener noreferrer" class="text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors duration-200 underline decoration-[var(--color-border)] hover:decoration-[var(--color-accent)] underline-offset-2" title="Young New Yorkers' Chorus">Young New Yorkers' Chorus</a>, <span title="🚴 Catch me at Prospect Park loop or crossing over the George Washington Bridge to the Palisades!" class="cursor-help border-b border-dotted border-[var(--color-border)] hover:border-[var(--color-accent)] transition-colors duration-200">biking across the city</span>, or <span title="✈️ Next destination: TBD — suggestions welcome!" class="cursor-help border-b border-dotted border-[var(--color-border)] hover:border-[var(--color-accent)] transition-colors duration-200">planning my next trip</span>.
-              </p>
-            </div>
-          </div>
+          <p class="font-mono text-xs text-[var(--color-accent)] tracking-[0.08em] uppercase mb-4">Who I Am</p>
+          <p class="text-base text-[var(--color-text)] leading-relaxed mb-4">
+            I'm a Senior Data Scientist at NewYork-Presbyterian, where I was the first dedicated LLM hire. I build clinical NLP pipelines within HIPAA-compliant LLM infrastructure (local and cloud) and design agentic workflows that help clinicians make better decisions. I earned my PhD in Biomedical Engineering from Columbia University in 2024, focusing on machine learning approaches to cardiac signal analysis in disease models using stem cell derived engineered heart tissues.
+          </p>
+          <p class="text-base text-[var(--color-text)] leading-relaxed">
+            Before NYP and Columbia, I interned at Genentech building ML models and studied Bioengineering and EECS at UC Berkeley. I've published 9 peer-reviewed papers during my PhD and built BeatProfiler, an open-source ML platform for cardiac analysis adopted by external researchers. When I'm not wrangling data, you'll find me singing with the <a href="https://ynyc.org" target="_blank" rel="noopener noreferrer" class="text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors duration-200 underline decoration-[var(--color-border)] hover:decoration-[var(--color-accent)] underline-offset-2" title="Young New Yorkers' Chorus">Young New Yorkers' Chorus</a>, <span title="🚴 Catch me at Prospect Park loop or crossing over the George Washington Bridge to the Palisades!" class="cursor-help border-b border-dotted border-[var(--color-border)] hover:border-[var(--color-accent)] transition-colors duration-200">biking across the city</span>, or <span title="✈️ Next destination: TBD — suggestions welcome!" class="cursor-help border-b border-dotted border-[var(--color-border)] hover:border-[var(--color-accent)] transition-colors duration-200">planning my next trip</span>.
+          </p>
         </ScrollReveal>
         <ScrollReveal client:visible delay={0.15}>
           <p class="font-mono text-xs text-[var(--color-accent)] tracking-[0.08em] uppercase mb-4">What I Do</p>
